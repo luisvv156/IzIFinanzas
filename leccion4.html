@@ -1,0 +1,218 @@
+    <html lang="es">
+    <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+    Ahorro e Inversión
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+    </head>
+    <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-4">
+    <!-- Encabezado principal -->
+    <header class="bg-blue-500 text-white p-6 rounded-lg text-center mb-6">
+        <h1 class="text-3xl font-bold">
+        Ahorro e Inversión
+        </h1>
+        <p class="mt-2">
+        Descubre cómo gestionar tus finanzas para un futuro más seguro.
+        </p>
+    </header>
+    <!-- Contenido principal -->
+    <div class="flex flex-col lg:flex-row gap-6">
+        <!-- Simulador de ahorro -->
+        <section class="bg-white p-6 rounded-lg shadow-lg w-full lg:w-1/2">
+        <h2 class="text-2xl text-blue-500 font-bold mb-4">
+        Simulador de Ahorros
+        </h2>
+        <p class="mb-4">
+        Completa los campos a continuación para calcular tu progreso financiero:
+        </p>
+        <form id="savings-simulator">
+        <!-- Definición de metas -->
+        <h3 class="text-xl font-semibold mb-2">
+        Definición de Metas
+        </h3>
+        <div class="mb-4">
+        <label class="block font-bold mb-1" for="goal-amount">
+            Monto a ahorrar:
+        </label>
+        <input class="w-full p-2 border rounded" id="goal-amount" name="goal-amount" placeholder="Ingresa tu objetivo monetario" required="" type="number"/>
+        </div>
+        <div class="mb-4">
+        <label class="block font-bold mb-1" for="time-frame">
+            Plazo (en meses):
+        </label>
+        <input class="w-full p-2 border rounded" id="time-frame" name="time-frame" placeholder="Ingresa el horizonte temporal" required="" type="number"/>
+        </div>
+        <div class="mb-4">
+        <label class="block font-bold mb-1" for="interest-rate">
+            Tasa de interés esperada (%):
+        </label>
+        <input class="w-full p-2 border rounded" id="interest-rate" name="interest-rate" placeholder="Opcional" type="number"/>
+        </div>
+        <!-- Datos de entrada -->
+        <h3 class="text-xl font-semibold mb-2">
+        Datos de Entrada
+        </h3>
+        <div class="mb-4">
+        <label class="block font-bold mb-1" for="initial-savings">
+            Ahorro inicial:
+        </label>
+        <input class="w-full p-2 border rounded" id="initial-savings" name="initial-savings" placeholder="Ingresa tu ahorro inicial" required="" type="number"/>
+        </div>
+        <div class="mb-4">
+        <label class="block font-bold mb-1" for="monthly-savings">
+            Ahorro mensual:
+        </label>
+        <input class="w-full p-2 border rounded" id="monthly-savings" name="monthly-savings" placeholder="Ingresa tu ahorro mensual" required="" type="number"/>
+        </div>
+        <div class="mb-4">
+        <label class="block font-bold mb-1" for="variable-expenses">
+            Gastos variables (mensuales):
+        </label>
+        <input class="w-full p-2 border rounded" id="variable-expenses" name="variable-expenses" placeholder="Opcional" type="number"/>
+        </div>
+        <button class="w-full bg-blue-500 text-white py-2 rounded mt-2" onclick="simulateSavings()" type="button">
+        Simular
+        </button>
+        <button class="w-full bg-gray-500 text-white py-2 rounded mt-2" type="reset">
+        Reiniciar
+        </button>
+        </form>
+        <div class="mt-4" id="result">
+        </div>
+        <!-- Gráfico de resultados -->
+        <div class="mt-6">
+        <canvas class="w-full h-64" id="savingsChart">
+        </canvas>
+        </div>
+        </section>
+        <!-- Consejos y recursos -->
+        <aside class="bg-white p-6 rounded-lg shadow-lg w-full lg:w-1/2">
+        <h2 class="text-2xl text-blue-500 font-bold mb-4">
+        Consejos Financieros
+        </h2>
+        <ul class="list-disc list-inside mb-6">
+        <li>
+        Establece prioridades claras para tus objetivos financieros.
+        </li>
+        <li>
+        Minimiza los gastos innecesarios para aumentar tu capacidad de ahorro.
+        </li>
+        <li>
+        Considera opciones de inversión que se ajusten a tu perfil de riesgo.
+        </li>
+        <li>
+        Consulta regularmente tu progreso financiero.
+        </li>
+        </ul>
+        <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">
+        Recursos Educativos
+        </h3>
+        <p class="mb-4">
+        Consulta recursos adicionales para aprender más sobre estrategias de ahorro e inversión:
+        </p>
+        <a class="w-full bg-blue-500 text-white py-2 rounded block text-center" href="https://educacionfinanciera.com" target="_blank">
+        Explorar Recursos
+        </a>
+        </div>
+        <div>
+        <h3 class="text-xl font-semibold mb-2">
+        Inspiración
+        </h3>
+        <img alt="Imagen inspiradora de una persona revisando sus finanzas con gráficos y tablas en una computadora" class="w-full rounded mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/shAeNsrWuzWXFabRkwu1OFYk3XswJQJgpHa2nTIeFPIp1WHUA.jpg" width="600"/>
+        <p>
+        Visualiza tus metas para mantenerte motivado en tu camino hacia el éxito financiero.
+        </p>
+        </div>
+        </aside>
+    </div>
+
+    </div>
+    <script>
+    function simulateSavings() {
+                const goalAmount = parseFloat(document.getElementById('goal-amount').value);
+                const timeFrame = parseFloat(document.getElementById('time-frame').value);
+                const interestRate = parseFloat(document.getElementById('interest-rate').value) || 0;
+                const initialSavings = parseFloat(document.getElementById('initial-savings').value);
+                const monthlySavings = parseFloat(document.getElementById('monthly-savings').value);
+                const variableExpenses = parseFloat(document.getElementById('variable-expenses').value) || 0;
+
+                if (isNaN(goalAmount) || isNaN(timeFrame) || isNaN(initialSavings) || isNaN(monthlySavings)) {
+                    document.getElementById('result').innerHTML = '<p class="text-red-500">Por favor, completa todos los campos obligatorios correctamente.</p>';
+                    return;
+                }
+
+                const effectiveMonthlySavings = monthlySavings - variableExpenses;
+                if (effectiveMonthlySavings <= 0) {
+                    document.getElementById('result').innerHTML = '<p class="text-red-500">Tus gastos variables superan tus ahorros mensuales. Reconsidera tu plan.</p>';
+                    return;
+                }
+
+                let totalSavings = initialSavings;
+                let months = 0;
+                const savingsData = [];
+
+                while (totalSavings < goalAmount && months < timeFrame) {
+                    totalSavings += effectiveMonthlySavings;
+                    totalSavings += (totalSavings * (interestRate / 100)) / 12; // Interés mensual
+                    months++;
+                    savingsData.push(totalSavings.toFixed(2));
+                }
+
+                if (totalSavings >= goalAmount) {
+                    document.getElementById('result').innerHTML = `<p class="text-green-500">Con tus ahorros mensuales efectivos de $${effectiveMonthlySavings.toFixed(2)}, alcanzarás tu meta de $${goalAmount.toFixed(2)} en aproximadamente ${months} meses.</p>`;
+                } else {
+                    document.getElementById('result').innerHTML = `<p class="text-yellow-500">En el plazo de ${timeFrame} meses, alcanzarás un total de ahorro de $${totalSavings.toFixed(2)}, que está por debajo de tu meta.</p>`;
+                }
+
+                // Generar gráfico
+                const ctx = document.getElementById('savingsChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: Array.from({ length: savingsData.length }, (_, i) => i + 1),
+                        datasets: [{
+                            label: 'Evolución del Ahorro',
+                            data: savingsData,
+                            borderColor: '#007bff',
+                            backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                            fill: true,
+                        }],
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top',
+                            },
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Meses',
+                                },
+                            },
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Monto Ahorrado ($)',
+                                },
+                            },
+                        },
+                    },
+                });
+            }
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,923 @@
+/* Global Styles */
+body {
+    background-color: lightgray; /* Fondo cambiado a lightgray */
+    color: #000; /* Texto negro para mayor contraste */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+    -webkit-font-smoothing: antialiased; /* Mejora la visualización en dispositivos Apple */
+}
+
+/* Login Container */
+.login-container {
+    background: #fff; /* Fondo del contenedor cambiado a blanco */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombras más suaves */
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    border: 1px solid #000; /* Contorno negro */
+    position: relative;
+    transform: translateZ(0);
+}
+
+/* Form */
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #000; /* Título en negro */
+}
+
+/* Form Fields */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000; /* Íconos en negro */
+    font-size: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border: 2px solid rgba(0, 0, 0, 0.3); /* Contorno tenue */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.05); /* Fondo claro */
+    color: #000; /* Texto negro */
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo más oscuro al enfocar */
+    border-color: #000; /* Contorno negro al enfocar */
+}
+
+.form-group input::placeholder {
+    color: #666; /* Placeholder en gris oscuro */
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #D3D3D3, #BEBEBE); /* Botón degradado claro */
+    color: #000; /* Texto negro */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más tenue */
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #BEBEBE, #D3D3D3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+.signup-link, .login-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.signup-link p, .login-link p {
+    font-size: 14px;
+    color: #000; /* Texto en negro */
+}
+
+.signup-text, .login-text {
+    color: #000; /* Links en negro */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-text:hover, .login-text:hover {
+    color: #444; /* Texto más oscuro al pasar el cursor */
+    transform: scale(1.1);
+}
+
+/* Password Toggle Icon */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #000; /* Contorno negro */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.toggle-password::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid #000; /* Icono negro */
+    background-color: transparent;
+}
+
+.toggle-password::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #000; /* Líneas en negro */
+    opacity: 1;
+}
+
+.toggle-password.active::after {
+    opacity: 0;
+}
+
+/* Estilo del mensaje de error */
+.error-message {
+    color: #ff4d4d; /* Rojo claro para indicar error */
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 1px solid #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Flash Message Styles (Integrado) */
+.flash-messages-container {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.flash-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.flash-message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+:root {
+    --primary-blue: #2196F3;
+    --secondary-blue: #1976D2;
+    --accent-blue: #64B5F6;
+    --gradient-start: #2196F3;
+    --gradient-end: #1976D2;
+    --white: #ffffff;
+    --gray-light: #f8f9fa;
+    --gray-medium: #757575;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    padding: clamp(10px, 2vw, 20px);
+}
+
+.container {
+    width: 100%;
+    max-width: min(85%, 400px); /* Reducido de 500px a 400px */
+    margin: auto;
+}
+
+.registration-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: clamp(15px, 4vw, 25px); /* Reducido de 40px a 25px */
+    border-radius: clamp(8px, 2vw, 15px); /* Reducido de 20px a 15px */
+    box-shadow: 0 10px 25px rgba(33, 150, 243, 0.2);
+    position: relative;
+    width: 100%;
+}
+
+h2 {
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: clamp(15px, 3vw, 20px); /* Reducido de 30px a 20px */
+    font-size: clamp(1.3rem, 3vw, 1.8rem); /* Reducido de 2.2rem a 1.8rem */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(30px, 8vw, 40px);
+    height: 3px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: clamp(12px, 2vw, 18px); /* Reducido de 25px a 18px */
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: clamp(4px, 1vw, 6px); /* Reducido de 8px a 6px */
+    color: var(--secondary-blue);
+    font-weight: 600;
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem); /* Reducido de 0.9rem a 0.85rem */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input, select {
+    width: 100%;
+    padding: clamp(8px, 1.5vw, 12px); /* Reducido de 15px a 12px */
+    border: 2px solid #E3F2FD;
+    border-radius: clamp(6px, 1.5vw, 8px); /* Reducido de 12px a 8px */
+    font-size: clamp(13px, 1.5vw, 14px); /* Reducido de 16px a 14px */
+    background: var(--white);
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: clamp(10px, 2vw, 14px); /* Reducido de 16px a 14px */
+    border: none;
+    border-radius: clamp(6px, 1.5vw, 8px);
+    font-size: clamp(14px, 2vw, 16px); /* Reducido de 18px a 16px */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white);
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos para dispositivos móviles pequeños */
+@media screen and (max-width: 360px) {
+    .registration-form {
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    label {
+        font-size: 0.7rem;
+    }
+
+    input, select, .submit-btn {
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilos para tablets */
+@media screen and (min-width: 361px) and (max-width: 768px) {
+    .registration-form {
+        padding: clamp(15px, 3vw, 20px);
+    }
+
+    h2 {
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    }
+
+    input, select, .submit-btn {
+        padding: clamp(8px, 1.5vw, 10px);
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 70%;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 400px; /* Reducido de 500px a 400px */
+    }
+
+    .registration-form {
+        padding: 25px; /* Reducido de 40px a 25px */
+    }
+}
+
+/* Mejoras de accesibilidad para diferentes dispositivos */
+@media (hover: hover) {
+    .submit-btn:hover {
+        transform: translateY(-2px); /* Reducido de -3px a -2px */
+        box-shadow: 0 8px 15px rgba(33, 150, 243, 0.2);
+    }
+
+    input:hover, select:hover {
+        background-color: var(--gray-light);
+    }
+}
+
+/* Estilos para dispositivos táctiles */
+@media (hover: none) {
+    input, select, .submit-btn {
+        font-size: 14px; /* Reducido de 16px a 14px */
+    }
+
+    .submit-btn:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Soporte para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+    }
+
+    .registration-form {
+        background: rgba(255, 255, 255, 0.98);
+    }
+}
+
+/* Ajustes para campos específicos */
+select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232196F3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center; /* Reducido de 15px a 8px */
+    background-size: 16px; /* Reducido de 20px a 16px */
+    padding-right: 30px;
+}
+
+/* Ajustes para inputs numéricos en móvil */
+input[type="number"],
+input[type="tel"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ... (Mantener los estilos anteriores y agregar los siguientes) ... */
+
+/* Estilos para las alertas */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: slideIn 0.3s ease-in-out;
+    position: relative;
+}
+
+.alert-success {
+    background-color: #4CAF50;
+    color: white;
+    border-left: 5px solid #388E3C;
+}
+
+.alert-error {
+    background-color: #f44336;
+    color: white;
+    border-left: 5px solid #d32f2f;
+}
+
+.alert-warning {
+    background-color: #ff9800;
+    color: white;
+    border-left: 5px solid #f57c00;
+}
+
+.alert-info {
+    background-color: #2196F3;
+    color: white;
+    border-left: 5px solid #1976D2;
+}
+
+/* Animación para las alertas */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos para mensajes de error en campos */
+.error-message {
+    color: #f44336;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos para campos con error */
+.input-error {
+    border-color: #f44336 !important;
+}
+
+/* Botón para cerrar alertas */
+.alert-close {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.alert-close:hover {
+    opacity: 1;
+    
+}
+/* Añade estos estilos a tu archivo CSS existente */
+
+.username-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.username-container input {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: not-allowed;
+}
+
+.generate-btn {
+    padding: 8px 15px;
+    background: linear-gradient(45deg, #D3D3D3, #BEBEBE);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.generate-btn:hover {
+    background: linear-gradient(45deg, #BEBEBE, #D3D3D3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.generate-btn:active {
+    transform: translateY(0);
+}
+
+
+/* Global Styles */
+body {
+    background-color: lightgray;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Login Container */
+.max-w-md {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    position: relative;
+    transform: translateZ(0);
+}
+
+/* Form */
+.text-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #000;
+}
+
+/* Form Fields */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #000;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: #000;
+}
+
+.form-group input::placeholder {
+    color: #666;
+}
+
+/* Sistema de Alertas */
+#alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.alert {
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: slideInRight 0.5s ease forwards;
+    border-left: 4px solid;
+}
+
+.alert-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alert-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.alert-message {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.alert-close {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.alert-close:hover {
+    opacity: 1;
+}
+
+/* Variantes de Alertas */
+.alert-success {
+    background-color: #f0fdf4;
+    color: #166534;
+    border-left-color: #22c55e;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border-left-color: #ef4444;
+}
+
+.alert-warning {
+    background-color: #fffbeb;
+    color: #92400e;
+    border-left-color: #f59e0b;
+}
+
+.alert-info {
+    background-color: #f0f9ff;
+    color: #075985;
+    border-left-color: #0ea5e9;
+}
+
+/* Animaciones de Alertas */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Mensajes de Error en Campos */
+.error-message {
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.input-error {
+    border-color: #dc2626 !important;
+}
+
+/* Buttons */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #D3D3D3, #BEBEBE);
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, #BEBEBE, #D3D3D3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estado de Carga */
+.submit-btn.loading {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.loading-spinner {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Links */
+.text-center {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.text-center p {
+    font-size: 14px;
+    color: #000;
+}
+
+.text-primary {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.text-primary:hover {
+    color: #444;
+    transform: scale(1.1);
+}
+
+/* Password Toggle */
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #000;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+/* Social Buttons */
+.social-button {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: white;
+    color: #000;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.social-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .max-w-md {
+        padding: 20px;
+    }
+
+    .form-group input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #alert-container {
+        max-width: calc(100% - 40px);
+        padding: 0 10px;
+    }
+
+    .alert {
+        padding: 12px 15px;
+    }
+
+    .alert-message {
+        font-size: 13px;
+    }
+}
+
+/* Animaciones Generales */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para campos deshabilitados */
+input:disabled,
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Mejoras de accesibilidad */
+:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+/* Divider styles */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.divider span {
+    padding: 0 10px;
+    color: #666;
+    font-size: 14px;
+}

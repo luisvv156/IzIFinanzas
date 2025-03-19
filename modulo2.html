@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Gratuito sobre Inversiones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section */
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1a73e8, #28a745);
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            font-size: 36px;
+        }
+
+        h2 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Container */
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 50px 30px;
+            margin-top: -50px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Module Styles */
+        .module {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .module:hover {
+            transform: translateY(-5px);
+        }
+
+        .module ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .module ul li {
+            position: relative;
+            padding-left: 30px;
+            font-weight: 500;
+        }
+
+        .module ul li:before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: #1a73e8;
+            font-size: 30px;
+            top: 0;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+            padding: 12px 30px;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #218838;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+        }
+
+        /* Summary Section */
+        .summary {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .summary:hover {
+            transform: translateY(-5px);
+        }
+
+        .summary p {
+            font-size: 18px;
+        }
+
+        .summary h3 {
+            color: #28a745;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, #1a73e8, #28a745);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Icon Section */
+        .icon {
+            font-size: 50px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+                padding: 40px 20px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .module ul li {
+                font-size: 16px;
+            }
+            .btn-primary {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    </style>
+</head>
+<body>
+    <h1>Curso Gratuito sobre Inversiones</h1>
+    <div class="container"> 
+        <h2>Módulo 2: Diversidad de Inversiones</h2>
+    
+<!-- Tema 1: Inversiones en el Mercado de Valores -->
+<div class="module">
+    <h3>Inversiones en el Mercado de Valores</h3>
+    <p>El mercado de valores es un lugar donde se compran y venden activos financieros como acciones, bonos y fondos cotizados en bolsa (ETFs). Los inversores participan para aumentar su capital o generar ingresos pasivos.</p>
+    
+    <!-- Información destacada -->
+    <div class="alert alert-info">
+        <strong>Dato Curioso:</strong> ¡El mercado de valores ha existido por más de 400 años! El intercambio de acciones comenzó en Ámsterdam en el siglo XVII.
+    </div>
+
+    <!-- Información y ejemplos -->
+    <h4>Tipos de Inversiones</h4>
+    <p>Aquí te mostramos algunos de los activos más comunes:</p>
+    <ul>
+        <li><strong>Acciones:</strong> Representan una propiedad parcial de una empresa. Si la empresa tiene éxito, el valor de sus acciones sube.</li>
+        <li><strong>Bonos:</strong> Son préstamos a gobiernos o empresas, que pagan intereses regulares. Menos riesgosos que las acciones, pero también con menores rendimientos.</li>
+        <li><strong>ETFs (Fondos Cotizados en Bolsa):</strong> Ofrecen una forma fácil de invertir en un grupo de activos sin tener que comprar cada uno individualmente. Proporcionan diversificación instantánea.</li>
+    </ul>
+
+    <!-- Gráfico de barras (Ejemplo visual) -->
+    <div class="chart">
+        <h5>Rendimiento histórico de una acción (Ejemplo):</h5>
+        <div style="height: 250px; background: #f4f7fc; border-radius: 10px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <div style="background-color: #1a73e8; height: 50px; width: 80%; margin-bottom: 10px; border-radius: 5px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">2020</div>
+            </div>
+            <div style="background-color: #28a745; height: 50px; width: 65%; margin-bottom: 10px; border-radius: 5px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">2021</div>
+            </div>
+            <div style="background-color: #ffc107; height: 50px; width: 60%; margin-bottom: 10px; border-radius: 5px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">2022</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actividad interactiva -->
+    <h4>Actividad interactiva:</h4>
+    <p>Vamos a poner a prueba tus conocimientos sobre los activos en el mercado de valores. ¿Qué tipo de activo es el siguiente?</p>
+    
+    <!-- Botones interactivos -->
+    <div class="btn-group" role="group" aria-label="Tipo de activo">
+        <button class="btn btn-outline-success" onclick="alert('¡Correcto! Las acciones representan propiedad en una empresa.')">Acciones</button>
+        <button class="btn btn-outline-primary" onclick="alert('Incorrecto. Los bonos son instrumentos de deuda.')">Bonos</button>
+        <button class="btn btn-outline-warning" onclick="alert('Incorrecto. Los ETFs son fondos que agrupan varias inversiones.')">ETFs</button>
+    </div>
+    
+    <!-- Explicación adicional -->
+    <p><small>Recuerda: Las acciones pueden generar ganancias tanto por dividendos como por la apreciación de su valor en el mercado. ¡Es importante investigar antes de invertir!</small></p>
+</div>
+    
+<!-- Tema 2: Inversiones Inmobiliarias -->
+<div class="module">
+    <h3>Inversiones Inmobiliarias</h3>
+    <p>Las inversiones inmobiliarias involucran la compra, venta o alquiler de propiedades físicas, así como la inversión en fondos de bienes raíces (REITs). Este tipo de inversión puede ofrecer ingresos pasivos a través de alquileres y la apreciación del valor de las propiedades.</p>
+    
+    <!-- Información destacada -->
+    <div class="alert alert-info">
+        <strong>Dato Curioso:</strong> ¡El mercado inmobiliario ha sido una de las principales fuentes de riqueza en la historia! Muchos inversionistas han creado fortunas mediante la compra de bienes raíces.
+    </div>
+
+    <!-- Información adicional -->
+    <h4>Tipos de Inversiones Inmobiliarias</h4>
+    <p>Las dos principales formas de invertir en bienes raíces son:</p>
+    <ul>
+        <li><strong>Compra de propiedades físicas:</strong> Comprar viviendas, oficinas o terrenos para alquiler o reventa. A medida que la propiedad aumenta su valor, el inversionista puede obtener ganancias por apreciación o alquileres.</li>
+        <li><strong>Fondos de inversión inmobiliaria (REITs):</strong> Fondos que permiten a los inversionistas comprar acciones en una cartera de bienes raíces, sin necesidad de comprar propiedades directamente. Estos fondos pagan dividendos regulares.</li>
+    </ul>
+
+    <!-- Gráfico de barras (Ejemplo visual de apreciación) -->
+    <div class="chart">
+        <h5>Apreciación de la propiedad en los últimos 5 años:</h5>
+        <div style="height: 250px; background: #f4f7fc; border-radius: 20px; padding: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+            <div style="background-color: #28a745; height: 50px; width: 90%; margin-bottom: 10px; border-radius: 10px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">2020</div>
+            </div>
+            <div style="background-color: #ff9800; height: 50px; width: 85%; margin-bottom: 10px; border-radius: 10px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">2021</div>
+            </div>
+            <div style="background-color: #1a73e8; height: 50px; width: 80%; margin-bottom: 10px; border-radius: 10px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">2022</div>
+            </div>
+            <div style="background-color: #28a745; height: 50px; width: 75%; margin-bottom: 10px; border-radius: 10px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">2023</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actividad interactiva -->
+    <h4>Actividad interactiva:</h4>
+    <p>¿Qué tipo de inversión inmobiliaria te parece más atractiva?</p>
+    
+    <!-- Botones interactivos -->
+    <div class="btn-group" role="group" aria-label="Tipo de inversión inmobiliaria">
+        <button class="btn btn-outline-success" onclick="alert('¡Correcto! Comprar propiedades puede generar ingresos por alquileres y por apreciación de su valor.')">Comprar propiedad</button>
+        <button class="btn btn-outline-warning" onclick="alert('Incorrecto. Los REITs permiten diversificar sin tener que comprar propiedades directamente.')">Invertir en REITs</button>
+    </div>
+    
+    <!-- Explicación adicional -->
+    <h5>Apalancamiento en Inversiones Inmobiliarias</h5>
+    <p><strong>Apalancamiento:</strong> En las inversiones inmobiliarias, puedes utilizar un préstamo para financiar la compra de una propiedad. Este apalancamiento te permite acceder a propiedades de mayor valor, potencialmente aumentando tus ganancias (o pérdidas) a medida que el valor de la propiedad cambie.</p>
+    <p><small>Es importante tener en cuenta los riesgos asociados con el apalancamiento. Si el valor de la propiedad disminuye, aún deberás pagar el préstamo.</small></p>
+</div>
+    
+<!-- Tema 3: Inversiones en Commodities -->
+<div class="module">
+    <h3>Inversiones en Commodities</h3>
+    <p>Los commodities son productos básicos que se comercializan en los mercados globales. Estos bienes pueden ser físicos como el oro, el petróleo, y los productos agrícolas, y se consideran una forma efectiva de protegerse contra la inflación y diversificar las inversiones.</p>
+    
+    <!-- Información destacada -->
+    <div class="alert alert-info">
+        <strong>Dato Curioso:</strong> Los commodities no sólo son esenciales para la economía global, sino que también pueden ofrecer un refugio seguro en tiempos de crisis económicas.
+    </div>
+
+    <h4>Tipos de Commodities</h4>
+    <p>Los principales tipos de commodities en los que los inversionistas pueden participar son:</p>
+    <ul>
+        <li><strong>Metales preciosos:</strong> El oro y la plata han sido considerados como reservas de valor tradicionales, especialmente en tiempos de incertidumbre económica.</li>
+        <li><strong>Energía:</strong> El petróleo y el gas natural son commodities esenciales que impulsan la economía mundial. El precio del petróleo puede ser volátil, pero también puede ofrecer grandes oportunidades de ganancias a corto plazo.</li>
+        <li><strong>Agrícolas:</strong> Productos como el trigo, el maíz, el café y el azúcar son ejemplos de commodities agrícolas. Estos bienes tienden a ser una excelente opción para protegerse contra la inflación.</li>
+    </ul>
+
+    <!-- Gráfico de precios históricos -->
+    <div class="chart">
+        <h5>Precios históricos de los Commodities más populares:</h5>
+        <div style="height: 250px; background: #f4f7fc; border-radius: 10px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <div style="background-color: #ffd700; height: 50px; width: 90%; margin-bottom: 10px; border-radius: 5px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">Oro</div>
+            </div>
+            <div style="background-color: #ff9800; height: 50px; width: 80%; margin-bottom: 10px; border-radius: 5px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">Petróleo</div>
+            </div>
+            <div style="background-color: #4caf50; height: 50px; width: 85%; margin-bottom: 10px; border-radius: 5px;">
+                <div style="color: #fff; padding: 5px; text-align: center; font-weight: bold;">Trigo</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actividad interactiva -->
+    <h4>Actividad interactiva:</h4>
+    <p>Selecciona a qué categoría pertenece cada commodity:</p>
+
+    <!-- Commodities interactivos -->
+    <div>
+        <button draggable="true" ondragstart="event.dataTransfer.setData('text', 'Oro')">Oro</button>
+        <button draggable="true" ondragstart="event.dataTransfer.setData('text', 'Petróleo')">Petróleo</button>
+        <button draggable="true" ondragstart="event.dataTransfer.setData('text', 'Trigo')">Trigo</button>
+    </div>
+
+    <div>
+        <div ondrop="drop(event, 'Metales preciosos')" ondragover="allowDrop(event)" style="border: 2px dashed gold; padding: 20px; margin: 10px;">Metales preciosos</div>
+        <div ondrop="drop(event, 'Energía')" ondragover="allowDrop(event)" style="border: 2px dashed #ff9800; padding: 20px; margin: 10px;">Energía</div>
+        <div ondrop="drop(event, 'Agrícolas')" ondragover="allowDrop(event)" style="border: 2px dashed green; padding: 20px; margin: 10px;">Agrícolas</div>
+    </div>
+
+    <!-- Explicación adicional sobre commodities -->
+    <h5>¿Por qué invertir en Commodities?</h5>
+    <p>Invertir en commodities puede ser una forma efectiva de diversificar tu portafolio, ya que los precios de estos productos no siempre siguen las mismas tendencias que las acciones o bonos. Además, son una cobertura contra la inflación, ya que los precios de los commodities tienden a subir cuando el valor del dinero disminuye.</p>
+    <p><small>Sin embargo, invertir en commodities puede ser riesgoso debido a la volatilidad del mercado, por lo que es recomendable hacer un análisis profundo antes de tomar decisiones.</small></p>
+</div>
+
+<script>
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function drop(event, category) {
+        const data = event.dataTransfer.getData('text');
+        alert(`Moviste "${data}" a la categoría "${category}".`);
+    }
+</script>
+    
+<!-- Tema 4: Inversiones en Criptomonedas -->
+<div class="module">
+    <h3>Inversiones en Criptomonedas</h3>
+    <p>Las criptomonedas son monedas digitales descentralizadas basadas en tecnología blockchain, lo que les permite operar sin necesidad de una autoridad central. A pesar de ser altamente volátiles, las criptomonedas han atraído a inversionistas debido a su potencial de altos rendimientos.</p>
+    
+    <!-- Introducción y contexto -->
+    <div class="alert alert-info">
+        <strong>Dato Curioso:</strong> La criptomoneda más conocida, el Bitcoin, fue creada en 2009 por una persona o grupo bajo el seudónimo de Satoshi Nakamoto.
+    </div>
+
+    <h4>Tipos principales de Criptomonedas</h4>
+    <p>Existen miles de criptomonedas, pero las más populares incluyen:</p>
+    <ul>
+        <li><strong>Bitcoin (BTC):</strong> La primera y más conocida criptomoneda, con la mayor capitalización de mercado.</li>
+        <li><strong>Ethereum (ETH):</strong> Conocida por su blockchain que soporta contratos inteligentes, lo que la hace útil para aplicaciones descentralizadas.</li>
+        <li><strong>Altcoins:</strong> Otras criptomonedas como <strong>Ripple (XRP)</strong>, <strong>Litecoin (LTC)</strong> y <strong>Cardano (ADA)</strong>, que ofrecen diferentes características y propósitos.</li>
+    </ul>
+
+    <!-- Información sobre cómo invertir -->
+    <h4>¿Cómo invertir en Criptomonedas?</h4>
+    <p>Invertir en criptomonedas puede hacerse de las siguientes maneras:</p>
+    <ul>
+        <li><strong>Plataformas de intercambio:</strong> Plataformas como <strong>Binance</strong>, <strong>Coinbase</strong> o <strong>Kraken</strong> permiten comprar, vender e intercambiar criptomonedas.</li>
+        <li><strong>Carteras digitales:</strong> Necesitarás una cartera digital para almacenar tus criptomonedas de forma segura. Pueden ser carteras en línea, de escritorio, móviles o de hardware.</li>
+        <li><strong>Trading:</strong> Algunos inversionistas prefieren hacer trading, comprando criptomonedas cuando su precio es bajo y vendiéndolas cuando sube.</li>
+    </ul>
+
+    <!-- Riesgos y Oportunidades -->
+    <h4>Riesgos y Oportunidades</h4>
+    <p>Antes de invertir en criptomonedas, es crucial considerar los siguientes factores:</p>
+    <ul>
+        <li><strong>Riesgos:</strong> Alta volatilidad de los precios, regulaciones gubernamentales cambiantes, posibilidad de pérdidas significativas.</li>
+        <li><strong>Oportunidades:</strong> Potencial de altos rendimientos, diversificación de portafolio, innovación en tecnología blockchain.</li>
+    </ul>
+
+    <!-- Actividad interactiva -->
+    <h4>Actividad interactiva:</h4>
+    <p>Elige una criptomoneda y aprende más sobre ella:</p>
+    <div>
+        <button onclick="mostrarInfo('bitcoin')">Bitcoin</button>
+        <button onclick="mostrarInfo('ethereum')">Ethereum</button>
+        <button onclick="mostrarInfo('cardano')">Cardano</button>
+    </div>
+    
+    <div id="info-criptomoneda" style="margin-top: 20px; padding: 15px; background-color: #f9f9f9; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <p id="descripcion"></p>
+    </div>
+
+    <!-- Consejos de seguridad -->
+    <h4>Consejos de Seguridad</h4>
+    <p>Es esencial mantener tus criptomonedas seguras. Aquí algunos consejos clave:</p>
+    <ul>
+        <li><strong>Usa carteras frías:</strong> Las carteras de hardware son más seguras que las carteras en línea, ya que no están conectadas a Internet.</li>
+        <li><strong>Activa la autenticación de dos factores:</strong> Para proteger tus cuentas de intercambio y carteras.</li>
+        <li><strong>Haz copias de seguridad:</strong> Asegúrate de tener una copia de seguridad de tu clave privada en un lugar seguro.</li>
+    </ul>
+</div>
+
+<script>
+    function mostrarInfo(criptomoneda) {
+        let descripcion = '';
+        
+        if (criptomoneda === 'bitcoin') {
+            descripcion = 'Bitcoin (BTC) es la primera criptomoneda y la más conocida. Fue creada en 2009 por Satoshi Nakamoto. Su propósito es funcionar como un sistema de pago digital descentralizado.';
+        } else if (criptomoneda === 'ethereum') {
+            descripcion = 'Ethereum (ETH) es una plataforma de blockchain que permite la creación de contratos inteligentes. Es la segunda criptomoneda más grande después de Bitcoin.';
+        } else if (criptomoneda === 'cardano') {
+            descripcion = 'Cardano (ADA) es una criptomoneda que se centra en ofrecer una plataforma de blockchain más segura y escalable, basada en principios de investigación científica.';
+        }
+        
+        document.getElementById('descripcion').innerText = descripcion;
+    }
+</script>
+    
+<!-- Tema 5: Fondos de Inversión y Fondos Mutuos -->
+<div class="module">
+    <h3>Fondos de Inversión y Fondos Mutuos</h3>
+    <p>Los fondos de inversión y los fondos mutuos son vehículos de inversión colectiva que agrupan el dinero de varios inversionistas para invertir en una variedad de activos. Son una excelente opción para quienes desean diversificar su portafolio sin necesidad de tener conocimientos avanzados de inversión.</p>
+    
+    <!-- Introducción a los fondos de inversión -->
+    <h4>¿Qué son los Fondos de Inversión?</h4>
+    <p>Un fondo de inversión es un conjunto de activos (acciones, bonos, bienes raíces, etc.) gestionado por una entidad financiera profesional. Los fondos de inversión pueden ser especializados en un sector específico, como tecnología o salud, o bien diversificados en varias clases de activos.</p>
+
+    <h4>¿Qué son los Fondos Mutuos?</h4>
+    <p>Los fondos mutuos también agrupan el dinero de varios inversionistas, pero suelen ser más accesibles y están diseñados para proporcionar una alta liquidez. Estos fondos invierten en una variedad de activos, con el objetivo de proporcionar rendimientos estables y de bajo riesgo.</p>
+
+    <!-- Tabla Comparativa -->
+    <h4>Comparativa entre Fondos de Inversión y Fondos Mutuos</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Características</th>
+                <th>Fondos de Inversión</th>
+                <th>Fondos Mutuos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Gestión</strong></td>
+                <td>Gestionados por empresas especializadas, pueden ser activos o pasivos según el tipo de fondo.</td>
+                <td>Gestionados por una sociedad de fondos mutuos. Se basan en un portafolio predefinido.</td>
+            </tr>
+            <tr>
+                <td><strong>Liquidez</strong></td>
+                <td>Varía según el tipo de fondo. Los fondos de inversión más especializados pueden tener baja liquidez.</td>
+                <td>Alta liquidez. Los inversionistas pueden comprar y vender participaciones a precios diarios.</td>
+            </tr>
+            <tr>
+                <td><strong>Diversificación</strong></td>
+                <td>Ofrecen diversificación tanto geográfica como sectorial. Dependiendo del fondo, la diversificación puede ser más compleja.</td>
+                <td>Alta diversificación. Invierten en una amplia gama de activos como acciones, bonos, bienes raíces, etc.</td>
+            </tr>
+            <tr>
+                <td><strong>Accesibilidad</strong></td>
+                <td>Requieren de un capital inicial mayor y pueden tener comisiones de entrada o gestión más altas.</td>
+                <td>Accesibles para pequeños inversionistas, con capital inicial bajo y comisiones generalmente más bajas.</td>
+            </tr>
+            <tr>
+                <td><strong>Rendimiento</strong></td>
+                <td>Potencial de mayor rendimiento, pero también más riesgo. Dependiendo del fondo, el rendimiento puede ser muy variable.</td>
+                <td>Rendimientos más estables pero generalmente más bajos en comparación con los fondos de inversión especializados.</td>
+            </tr>
+            <tr>
+                <td><strong>Riesgo</strong></td>
+                <td>Dependiendo de la estrategia del fondo, puede haber un mayor riesgo de volatilidad.</td>
+                <td>Generalmente, los fondos mutuos tienen un riesgo más bajo debido a su mayor diversificación.</td>
+            </tr>
+            <tr>
+                <td><strong>Plazo de Inversión</strong></td>
+                <td>Pueden tener un horizonte de inversión más largo. Algunos fondos de inversión tienen restricciones para la venta anticipada.</td>
+                <td>Se pueden liquidar a corto plazo sin penalización, lo que los hace atractivos para quienes buscan flexibilidad.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Ventajas y Desventajas</h4>
+    <p>A continuación se presentan algunas ventajas y desventajas clave de cada tipo de fondo:</p>
+    
+    <h5><strong>Fondos de Inversión:</strong></h5>
+    <ul>
+        <li><strong>Ventajas:</strong> Potencial de altos rendimientos, acceso a inversiones especializadas, y la posibilidad de gestionar el riesgo de forma activa.</li>
+        <li><strong>Desventajas:</strong> Requieren de un capital inicial mayor, comisiones más altas, y algunos fondos pueden tener baja liquidez.</li>
+    </ul>
+
+    <h5><strong>Fondos Mutuos:</strong></h5>
+    <ul>
+        <li><strong>Ventajas:</strong> Alta liquidez, accesibilidad con un bajo capital inicial, y diversificación instantánea.</li>
+        <li><strong>Desventajas:</strong> Rendimientos más bajos en comparación con fondos de inversión especializados, y comisiones de gestión que pueden impactar los rendimientos a largo plazo.</li>
+    </ul>
+
+    <h4>¿Cuál es el adecuado para ti?</h4>
+    <p>Si eres un inversionista que busca diversificación y una gestión activa, los fondos de inversión pueden ser adecuados. Sin embargo, si prefieres una opción de bajo riesgo y alta liquidez, los fondos mutuos son una excelente opción.</p>  
+    <h4>Actividad interactiva:</h4>
+    <p>Completa la siguiente afirmación seleccionando la respuesta correcta:</p>
+    <p>“Los fondos de inversión son gestionados por ______________.”</p>
+    <button onclick="alert('¡Correcto! Los fondos son gestionados por profesionales.')">Profesionales</button>
+    <button onclick="alert('Incorrecto. Los fondos no son gestionados directamente por los inversionistas.')">Inversionistas</button>
+</div>
+    </div>
+    
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+    
+        function drop(event, category) {
+            const data = event.dataTransfer.getData('text');
+            alert(`Moviste "${data}" a la categoría "${category}".`);
+        }
+    </script>
+    </body>
+    </html>

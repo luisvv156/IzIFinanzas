@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Avanzada de Presupuesto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <div class="max-w-lg mx-auto mt-10 p-6 bg-white rounded-xl shadow-lg">
+        <h1 class="text-3xl font-semibold text-blue-600 text-center mb-6">
+            <i class="fas fa-calculator"></i> Calculadora Avanzada de Presupuesto
+        </h1>
+
+        <form id="advanced-budget-form">
+            <div class="mb-4">
+                <label for="income" class="block text-lg font-bold text-gray-700">Ingresos Mensuales:</label>
+                <input type="number" id="income" class="mt-2 p-3 w-full border border-gray-300 rounded-md" placeholder="Ingresa tus ingresos" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="expenses" class="block text-lg font-bold text-gray-700">Gastos Mensuales:</label>
+                <input type="number" id="expenses" class="mt-2 p-3 w-full border border-gray-300 rounded-md" placeholder="Ingresa tus gastos" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="savings" class="block text-lg font-bold text-gray-700">Ahorros Deseados:</label>
+                <input type="number" id="savings" class="mt-2 p-3 w-full border border-gray-300 rounded-md" placeholder="Ingresa tus ahorros deseados" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="investments" class="block text-lg font-bold text-gray-700">Inversiones:</label>
+                <input type="number" id="investments" class="mt-2 p-3 w-full border border-gray-300 rounded-md" placeholder="Ingresa tus inversiones" required>
+            </div>
+
+            <div class="mb-6">
+                <label for="extra-income" class="block text-lg font-bold text-gray-700">Otros Ingresos:</label>
+                <input type="number" id="extra-income" class="mt-2 p-3 w-full border border-gray-300 rounded-md" placeholder="Ingresa otros ingresos" required>
+            </div>
+
+            <button type="submit" class="w-full p-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-500">Calcular</button>
+        </form>
+
+        <div id="advanced-result" class="mt-6 p-4 bg-teal-100 text-center text-lg font-semibold text-teal-800 rounded-md"></div>
+
+        <button class="mt-6 w-full p-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-500" onclick="window.location.href = 'index.html';">
+            Regresar a la Página Principal
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('advanced-budget-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const income = parseFloat(document.getElementById('income').value);
+            const expenses = parseFloat(document.getElementById('expenses').value);
+            const savings = parseFloat(document.getElementById('savings').value);
+            const investments = parseFloat(document.getElementById('investments').value);
+            const extraIncome = parseFloat(document.getElementById('extra-income').value);
+
+            if ([income, expenses, savings, investments, extraIncome].some(val => isNaN(val) || val < 0)) {
+                alert("Por favor, ingresa valores válidos en todos los campos.");
+                return;
+            }
+
+            const totalIncome = income + extraIncome;
+            const balance = totalIncome - (expenses + savings + investments);
+
+            // Conversión de divisas (tasas ficticias)
+            const euroToMXN = 20; // 1 EUR = 20 MXN
+            const euroToUSD = 1.05; // 1 EUR = 1.05 USD
+
+            const balanceMXN = balance * euroToMXN;
+            const balanceUSD = balance * euroToUSD;
+
+            const resultDiv = document.getElementById('advanced-result');
+            if (balance > 0) {
+                resultDiv.innerHTML = `<p>¡Felicidades! Después de tus gastos, ahorros e inversiones, tienes un saldo positivo de 
+                <strong>€${balance.toFixed(2)}</strong> (MXN ${balanceMXN.toFixed(2)} / USD ${balanceUSD.toFixed(2)})</p>`;
+            } else if (balance < 0) {
+                resultDiv.innerHTML = `<p>Atención: Tienes un déficit de 
+                <strong>€${Math.abs(balance).toFixed(2)}</strong> (MXN ${Math.abs(balanceMXN).toFixed(2)} / USD ${Math.abs(balanceUSD).toFixed(2)})</p>`;
+            } else {
+                resultDiv.innerHTML = `<p>Estás equilibrado, sin saldo sobrante ni déficit este mes.</p>`;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

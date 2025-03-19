@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Planificación para el Retiro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        .form-control {
+            border-radius: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .summary {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .summary h3 {
+            color: #28a745;
+        }
+        .summary p {
+            font-size: 18px;
+        }
+        table th, table td {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .blue-background {
+            background-color: #007bff;
+            color: white;
+        }
+        .info-section {
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Nueva sección de Información Importante -->
+        <div class="info-section">
+            <h2>Información Importante</h2>
+            <p>Planificar para el retiro es uno de los pasos más cruciales para garantizar una vida cómoda y libre de preocupaciones financieras cuando llegue el momento de dejar de trabajar. El ahorro y la inversión a lo largo de los años son fundamentales para construir un fondo de retiro adecuado que cubra tus gastos en la jubilación.</p>
+            <p>Es importante comenzar a ahorrar lo antes posible, incluso si el monto inicial es pequeño. A medida que crezca tu fondo, la inversión inteligente y la tasa de ahorro pueden acelerar el crecimiento de tu dinero. Los factores clave en la planificación del retiro incluyen:</p>
+            <ul>
+                <li><strong>Ingresos actuales:</strong> Es esencial saber cuánto estás ganando para poder planificar tus ahorros y gastos.</li>
+                <li><strong>Gastos proyectados:</strong> Estimar los gastos que tendrás en la jubilación te ayudará a establecer metas claras de ahorro.</li>
+                <li><strong>Inversiones:</strong> Las inversiones adecuadas pueden aumentar tu fondo de retiro, asegurando que tengas suficientes recursos cuando dejes de trabajar.</li>
+                <li><strong>Salud:</strong> Los gastos en salud suelen aumentar con la edad, por lo que es fundamental tener en cuenta los costos médicos en tu planificación.</li>
+            </ul>
+            <p>Este formulario te ayudará a organizar y calcular los aspectos esenciales de tu plan de retiro, como tus ahorros, inversiones y los gastos futuros. Con estos datos, podrás visualizar tu situación financiera y tomar decisiones informadas sobre tu futuro.</p>
+        </div>
+
+        <h1 class="text-center">Guía de Planificación para el Retiro</h1>
+        <p class="text-center">Organiza tus ahorros, inversiones y gastos para asegurar un retiro cómodo.</p>
+
+        <form id="retirementForm">
+            <div class="section">
+                <h2>Datos de Ingreso y Ahorro</h2>
+                <div class="mb-3">
+                    <label for="currentIncome" class="form-label">Ingreso Actual Mensual:</label>
+                    <input type="number" class="form-control" id="currentIncome" placeholder="Ejemplo: 2500" required>
+                </div>
+                <div class="mb-3">
+                    <label for="savingsRate" class="form-label">Tasa de Ahorro Mensual (%):</label>
+                    <input type="number" class="form-control" id="savingsRate" placeholder="Ejemplo: 15" required>
+                </div>
+                <div class="mb-3">
+                    <label for="retirementAge" class="form-label">Edad de Jubilación Deseada:</label>
+                    <input type="number" class="form-control" id="retirementAge" placeholder="Ejemplo: 65" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Inversiones y Fondos de Retiro</h2>
+                <div class="mb-3">
+                    <label for="currentRetirementFunds" class="form-label">Fondos de Retiro Actuales:</label>
+                    <input type="number" class="form-control" id="currentRetirementFunds" placeholder="Ejemplo: 50000" required>
+                </div>
+                <div class="mb-3">
+                    <label for="monthlyInvestment" class="form-label">Inversión Mensual para el Retiro:</label>
+                    <input type="number" class="form-control" id="monthlyInvestment" placeholder="Ejemplo: 500" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Gastos en la Jubilación</h2>
+                <div class="mb-3">
+                    <label for="monthlyRetirementExpenses" class="form-label">Gastos Mensuales Estimados en el Retiro:</label>
+                    <input type="number" class="form-control" id="monthlyRetirementExpenses" placeholder="Ejemplo: 1500" required>
+                </div>
+                <div class="mb-3">
+                    <label for="healthcareExpenses" class="form-label">Gastos en Salud en el Retiro:</label>
+                    <input type="number" class="form-control" id="healthcareExpenses" placeholder="Ejemplo: 200" required>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Ingreso / Ahorro</th>
+                        <th>Inversión Mensual</th>
+                        <th>Gastos en Retiro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ingreso Mensual</td>
+                        <td id="incomeTable"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Ahorro Mensual</td>
+                        <td id="savingsRateTable"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Inversión para Retiro</td>
+                        <td></td>
+                        <td id="investmentTable"></td>
+                        <td></td>
+                    </tr>
+                    <tr class="blue-background">
+                        <td>Gastos en Retiro</td>
+                        <td></td>
+                        <td></td>
+                        <td id="retirementExpensesTable"></td>
+                    </tr>
+                    <tr>
+                        <td>Gastos en Salud</td>
+                        <td></td>
+                        <td></td>
+                        <td id="healthcareExpensesTable"></td>
+                    </tr>
+                    <tr class="blue-background">
+                        <td>Totales</td>
+                        <td id="totalIncomeTable"></td>
+                        <td id="totalInvestmentTable"></td>
+                        <td id="totalRetirementExpensesTable"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="section">
+                <h2>Proyección del Retiro</h2>
+                <div class="mb-3">
+                    <label for="expectedRetirementFunds" class="form-label">Fondos Esperados al Retiro:</label>
+                    <input type="number" class="form-control" id="expectedRetirementFunds" placeholder="Ejemplo: 300000" required>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Generar Resumen de Retiro</button>
+            </div>
+        </form>
+
+        <div id="retirementSummary" class="summary" style="display: none;">
+            <h3>Resumen de Planificación para el Retiro</h3>
+            <p><strong>Ingreso Mensual Actual:</strong> $<span id="totalIncome"></span></p>
+            <p><strong>Ahorro Mensual Estimado:</strong> $<span id="totalSavings"></span></p>
+            <p><strong>Inversión Mensual para Retiro:</strong> $<span id="totalInvestment"></span></p>
+            <p><strong>Gastos Mensuales Estimados en el Retiro:</strong> $<span id="totalRetirementExpenses"></span></p>
+            <p><strong>Fondos Esperados al Retiro:</strong> $<span id="expectedRetirementFunds"></span></p>
+
+            <h3>Gráfico de Distribución de Ingresos y Gastos</h3>
+            <canvas id="retirementChart" height="300"></canvas>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('retirementForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Obtener los valores del formulario
+            const currentIncome = parseFloat(document.getElementById('currentIncome').value) || 0;
+            const savingsRate = parseFloat(document.getElementById('savingsRate').value) || 0;
+            const retirementAge = parseFloat(document.getElementById('retirementAge').value) || 0;
+            const currentRetirementFunds = parseFloat(document.getElementById('currentRetirementFunds').value) || 0;
+            const monthlyInvestment = parseFloat(document.getElementById('monthlyInvestment').value) || 0;
+            const monthlyRetirementExpenses = parseFloat(document.getElementById('monthlyRetirementExpenses').value) || 0;
+            const healthcareExpenses = parseFloat(document.getElementById('healthcareExpenses').value) || 0;
+            const expectedRetirementFunds = parseFloat(document.getElementById('expectedRetirementFunds').value) || 0;
+
+            // Calcular totales
+            const totalIncome = currentIncome;
+            const totalSavings = currentIncome * (savingsRate / 100);
+            const totalInvestment = monthlyInvestment;
+            const totalRetirementExpenses = monthlyRetirementExpenses + healthcareExpenses;
+
+            // Mostrar los valores en la tabla
+            document.getElementById('incomeTable').innerText = totalIncome.toFixed(2);
+            document.getElementById('savingsRateTable').innerText = (totalSavings).toFixed(2);
+            document.getElementById('investmentTable').innerText = totalInvestment.toFixed(2);
+            document.getElementById('retirementExpensesTable').innerText = totalRetirementExpenses.toFixed(2);
+            document.getElementById('healthcareExpensesTable').innerText = healthcareExpenses.toFixed(2);
+            document.getElementById('totalIncomeTable').innerText = totalIncome.toFixed(2);
+            document.getElementById('totalInvestmentTable').innerText = totalInvestment.toFixed(2);
+            document.getElementById('totalRetirementExpensesTable').innerText = totalRetirementExpenses.toFixed(2);
+
+            // Mostrar el gráfico de distribución de ingresos y gastos
+            const ctx = document.getElementById('retirementChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Ingreso Mensual', 'Ahorro Mensual', 'Inversión para Retiro', 'Gastos en Retiro'],
+                    datasets: [{
+                        data: [totalIncome, totalSavings, totalInvestment, totalRetirementExpenses],
+                        backgroundColor: ['#28a745', '#007bff', '#ffc107', '#dc3545'],
+                        hoverBackgroundColor: ['#218838', '#0056b3', '#e0a800', '#c82333']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                    }
+                }
+            });
+
+            // Mostrar el resumen y el gráfico
+            document.getElementById('retirementSummary').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

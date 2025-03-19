@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+
+    <!-- Added: Navigation bar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" alt="Logo" class="h-8 w-8 rounded">
+                    <span class="ml-2 text-xl font-bold text-gray-800">Portal</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="relative" id="userMenu">
+                        <button class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
+                            <img id="userAvatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" alt="User Avatar" class="h-8 w-8 rounded-full">
+                            <span id="userName" class="text-gray-700 font-medium">Welcome, User</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Added: Main content area -->
+    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Added: User profile section -->
+                <div class="md:col-span-1">
+                    <div class="text-center">
+                        <img id="profileAvatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" alt="Profile Picture" class="h-32 w-32 rounded-full mx-auto">
+                        <h2 id="profileName" class="mt-4 text-2xl font-bold text-gray-800">User Name</h2>
+                        <p id="userRole" class="text-gray-600">Student</p>
+                    </div>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center space-x-2 text-gray-600">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span id="userEmail">user@example.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-600">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span id="userPhone">+1234567890</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Added: Dashboard content -->
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Dashboard</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-6 text-white">
+                            <h4 class="text-lg font-semibold">Welcome!</h4>
+                            <p class="mt-2">Access your personal dashboard to manage your account and view your activities.</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg p-6 text-white">
+                            <h4 class="text-lg font-semibold">Quick Actions</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li><button id="editProfileBtn" class="text-white underline">Edit Profile</button></li>
+                                <li><button id="changePasswordBtn" class="text-white underline">Change Password</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Added: Profile Edit Modal -->
+            <div id="editProfileModal" class="fixed inset-0 bg-gray-500 bg-opacity-50 hidden">
+                <div class="flex justify-center items-center min-h-screen">
+                    <div class="bg-white rounded-lg shadow-lg p-8 w-96">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Edit Profile</h3>
+                        <form id="editProfileForm">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-600">Name</label>
+                                <input type="text" id="editName" class="mt-2 p-2 border rounded w-full" value="User Name">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-600">Email</label>
+                                <input type="email" id="editEmail" class="mt-2 p-2 border rounded w-full" value="user@example.com">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-600">Phone</label>
+                                <input type="text" id="editPhone" class="mt-2 p-2 border rounded w-full" value="+1234567890">
+                            </div>
+                            <div class="flex justify-end space-x-4">
+                                <button type="button" id="cancelEditProfile" class="bg-gray-500 text-white px-4 py-2 rounded">Cancel</button>
+                                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Added: Change Password Modal -->
+            <div id="changePasswordModal" class="fixed inset-0 bg-gray-500 bg-opacity-50 hidden">
+                <div class="flex justify-center items-center min-h-screen">
+                    <div class="bg-white rounded-lg shadow-lg p-8 w-96">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Change Password</h3>
+                        <form id="changePasswordForm">
+                            <div class="mb-4">
+                                <label for="currentPassword" class="block text-gray-600">Current Password</label>
+                                <input type="password" id="currentPassword" class="mt-2 p-2 border rounded w-full" placeholder="Current Password">
+                            </div>
+                            <div class="mb-4">
+                                <label for="newPassword" class="block text-gray-600">New Password</label>
+                                <input type="password" id="newPassword" class="mt-2 p-2 border rounded w-full" placeholder="New Password">
+                            </div>
+                            <div class="mb-4">
+                                <label for="confirmPassword" class="block text-gray-600">Confirm New Password</label>
+                                <input type="password" id="confirmPassword" class="mt-2 p-2 border rounded w-full" placeholder="Confirm New Password">
+                            </div>
+                            <div class="flex justify-end space-x-4">
+                                <button type="button" id="cancelChangePassword" class="bg-gray-500 text-white px-4 py-2 rounded">Cancel</button>
+                                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Added: JavaScript to update user information and handle modal behavior -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate user data (in a real app, this would come from your backend)
+            const user = {
+                name: localStorage.getItem('userName') || 'User Name',
+                email: localStorage.getItem('userEmail') || 'user@example.com',
+                phone: localStorage.getItem('userPhone') || '+1234567890',
+                role: localStorage.getItem('userRole') || 'Student'
+            };
+
+            // Update UI with user information
+            document.getElementById('userName').textContent = `Welcome, ${user.name}`;
+            document.getElementById('profileName').textContent = user.name;
+            document.getElementById('userEmail').textContent = user.email;
+            document.getElementById('userPhone').textContent = user.phone;
+            document.getElementById('userRole').textContent = user.role;
+
+            // Edit Profile Modal
+            document.getElementById('editProfileBtn').addEventListener('click', function() {
+                document.getElementById('editProfileModal').classList.remove('hidden');
+            });
+
+            document.getElementById('cancelEditProfile').addEventListener('click', function() {
+                document.getElementById('editProfileModal').classList.add('hidden');
+            });
+
+            // Change Password Modal
+            document.getElementById('changePasswordBtn').addEventListener('click', function() {
+                document.getElementById('changePasswordModal').classList.remove('hidden');
+            });
+
+            document.getElementById('cancelChangePassword').addEventListener('click', function() {
+                document.getElementById('changePasswordModal').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

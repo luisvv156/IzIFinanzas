@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Gratuito sobre Inversiones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section */
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1a73e8, #28a745);
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            font-size: 36px;
+        }
+
+        h2 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Container */
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 50px 30px;
+            margin-top: -50px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Module Styles */
+        .module {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .module:hover {
+            transform: translateY(-5px);
+        }
+
+        .module ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .module ul li {
+            position: relative;
+            padding-left: 30px;
+            font-weight: 500;
+        }
+
+        .module ul li:before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: #1a73e8;
+            font-size: 30px;
+            top: 0;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+            padding: 12px 30px;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #218838;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+        }
+
+        /* Summary Section */
+        .summary {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .summary:hover {
+            transform: translateY(-5px);
+        }
+
+        .summary p {
+            font-size: 18px;
+        }
+
+        .summary h3 {
+            color: #28a745;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, #1a73e8, #28a745);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Icon Section */
+        .icon {
+            font-size: 50px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+                padding: 40px 20px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .module ul li {
+                font-size: 16px;
+            }
+            .btn-primary {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Gratuito sobre Inversiones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* CSS proporcionado */
+        /* Pega aquí el CSS completo de tu solicitud */
+    </style>
+</head>
+<body>
+    <h1>Curso Gratuito sobre Inversiones</h1>
+    <div class="container">
+        <h2>Temas del Curso</h2>
+        
+        <!-- Tema 1 -->
+        <div class="module">
+            <h3>¿Qué es una inversión?</h3>
+            <p>Una inversión es el uso de dinero o recursos con el objetivo de generar un beneficio futuro. Esto puede incluir desde acciones en la bolsa hasta proyectos de emprendimiento o activos físicos como bienes raíces.</p>
+            <ul>
+                <li><strong>Definición técnica:</strong> Colocación de recursos en instrumentos o proyectos para obtener una ganancia.</li>
+                <li><strong>Ejemplos:</strong> Invertir en acciones, comprar una propiedad para rentar, o financiar un negocio.</li>
+                <li><strong>Diferencia con gasto:</strong> Un gasto no genera retorno, mientras que una inversión sí.</li>
+            </ul>
+            <h4>Actividad:</h4>
+            <p>Utiliza esta simulación interactiva para identificar inversiones:</p>
+            <div>
+                <p>Selecciona las opciones que creas que son inversiones:</p>
+                <button onclick="alert('Correcto! Comprar acciones es una inversión.')">Comprar acciones</button>
+                <button onclick="alert('Incorrecto! Pagar por un café no es una inversión.')">Comprar un café</button>
+                <button onclick="alert('Correcto! Comprar un departamento para rentar es una inversión.')">Comprar un departamento</button>
+            </div>
+        </div>
+            <!-- Tema 2: Diferencia entre ahorro e inversión -->
+            <div class="module">
+                <h3>Diferencia entre ahorro e inversión</h3>
+                <p>El ahorro está diseñado para cubrir emergencias y metas a corto plazo. La inversión, en cambio, busca multiplicar el capital a largo plazo asumiendo riesgos.</p>
+                <ul>
+                    <li><strong>Ahorro:</strong> Dinero guardado para emergencias o gastos planificados.</li>
+                    <li><strong>Inversión:</strong> Dinero que se utiliza para generar ingresos futuros.</li>
+                    <li><strong>Importancia de un fondo de emergencia:</strong> Antes de invertir, asegúrate de tener un colchón financiero.</li>
+                </ul>
+                <h4>Actividad interactiva:</h4>
+                <p>Completa el siguiente formulario para calcular cuánto debes ahorrar para emergencias:</p>
+                <label for="monthly-expenses">Gastos mensuales ($): </label>
+                <input type="number" id="monthly-expenses">
+                <label for="months">Meses de reserva: </label>
+                <input type="number" id="months" value="6">
+                <button onclick="calculateSavings()">Calcular</button>
+                <p id="savings-result"></p>
+            </div>
+    
+            <!-- Tema 3: ¿Por qué invertir es importante? -->
+            <div class="module">
+                <h3>¿Por qué invertir es importante?</h3>
+                <p>Invertir te ayuda a superar la inflación, crear riqueza y alcanzar metas financieras a largo plazo.</p>
+                <ul>
+                    <li><strong>Impacto de la inflación:</strong> Sin invertir, el dinero pierde poder adquisitivo.</li>
+                    <li><strong>Interés compuesto:</strong> Genera rendimientos exponenciales con el tiempo.</li>
+                    <li><strong>Ejemplo práctico:</strong> Una inversión de $10,000 con un 8% anual se duplica en menos de 10 años.</li>
+                </ul>
+                <h4>Actividad interactiva:</h4>
+                <p>Calcula cuánto crecerá tu dinero en 10 años:</p>
+                <input type="number" id="principal" placeholder="Monto inicial ($)">
+                <input type="number" id="rate" placeholder="Tasa de interés (%)">
+                <button onclick="calculateCompound()">Calcular</button>
+                <p id="result"></p>
+            </div>
+    
+            <!-- Tema 4: Tipos de inversión -->
+            <div class="module">
+                <h3>Tipos de inversión: Rentables vs. Conservadoras</h3>
+                <p>Las inversiones pueden clasificarse por riesgo y retorno:</p>
+                <ul>
+                    <li><strong>Rentables:</strong> Alta recompensa, pero con riesgos mayores (acciones, criptomonedas).</li>
+                    <li><strong>Conservadoras:</strong> Menor riesgo, pero retorno más bajo (bonos, cuentas de ahorro).</li>
+                    <li><strong>Estrategias híbridas:</strong> Combina ambos tipos para diversificar riesgos.</li>
+                </ul>
+                <h4>Actividad interactiva:</h4>
+                <p>Arrastra las opciones al tipo correcto:</p>
+                <div>
+                    <p>Opciones:</p>
+                    <button draggable="true" ondragstart="event.dataTransfer.setData('text', 'Criptomonedas')">Criptomonedas</button>
+                    <button draggable="true" ondragstart="event.dataTransfer.setData('text', 'Bonos')">Bonos</button>
+                    <button draggable="true" ondragstart="event.dataTransfer.setData('text', 'Fondos de inversión')">Fondos de inversión</button>
+                </div>
+                <div>
+                    <div ondrop="drop(event, 'Rentable')" ondragover="allowDrop(event)" style="border: 2px dashed #1a73e8; padding: 20px; margin: 10px;">Inversiones Rentables</div>
+                    <div ondrop="drop(event, 'Conservadora')" ondragover="allowDrop(event)" style="border: 2px dashed #28a745; padding: 20px; margin: 10px;">Inversiones Conservadoras</div>
+                </div>
+            </div>
+    
+            <!-- Tema 5: El riesgo y la recompensa -->
+            <div class="module">
+                <h3>El riesgo y la recompensa: Comprendiendo el riesgo</h3>
+                <p>El riesgo en inversiones se refiere a la posibilidad de perder dinero. A mayor riesgo, mayor potencial de recompensa.</p>
+                <ul>
+                    <li><strong>Medir el riesgo:</strong> Diversificación y análisis de mercado son claves.</li>
+                    <li><strong>Relación riesgo-recompensa:</strong> No todos los riesgos valen la pena.</li>
+                    <li><strong>Ejemplo:</strong> Comparar acciones de una startup frente a bonos gubernamentales.</li>
+                </ul>
+                <h4>Actividad:</h4>
+                <p>Evalúa si aceptarías las siguientes inversiones basándote en su riesgo y recompensa:</p>
+                <p><strong>1.</strong> Invertir en una empresa emergente de alta tecnología (Retorno: 15%, Riesgo: Alto)</p>
+                <button onclick="alert('Correcto. Es arriesgado, pero con potencial.')">Aceptar</button>
+                <button onclick="alert('Incorrecto. Esta inversión puede ser adecuada si diversificas.')">Rechazar</button>
+            </div>
+    
+            <!-- Tema 6: Diversificación -->
+            <div class="module">
+                <h3>La importancia de la diversificación</h3>
+                <p>La diversificación minimiza el riesgo al distribuir tus inversiones en diferentes activos.</p>
+                <ul>
+                    <li><strong>Portafolio diversificado:</strong> Combina acciones, bonos, bienes raíces y efectivo.</li>
+                    <li><strong>Ejemplo práctico:</strong> Una persona que solo invierte en acciones tecnológicas puede perder todo si el mercado cae.</li>
+                </ul>
+                <h4>Actividad interactiva:</h4>
+                <p>Diseña un portafolio diversificado seleccionando las opciones correctas:</p>
+                <select>
+                    <option value="">Seleccione...</option>
+                    <option value="acciones">50% en acciones</option>
+                    <option value="bonos">30% en bonos</option>
+                    <option value="inmuebles">20% en inmuebles</option>
+                </select>
+            </div>
+        </div>
+    
+        <footer>
+            <p>© 2025 Curso Completo sobre Inversiones. Todos los derechos reservados. <a href="#contacto">Contacto</a></p>
+        </footer>
+    
+        <script>
+            function calculateSavings() {
+                const expenses = parseFloat(document.getElementById('monthly-expenses').value);
+                const months = parseInt(document.getElementById('months').value);
+                const savings = expenses * months;
+                document.getElementById('savings-result').innerText = `Necesitas ahorrar $${savings.toFixed(2)} para emergencias.`;
+            }
+    
+            function calculateCompound() {
+                const principal = parseFloat(document.getElementById('principal').value);
+                const rate = parseFloat(document.getElementById('rate').value) / 100;
+                const years = 10; // 10 años como ejemplo fijo
+                const amount = principal * Math.pow((1 + rate), years);
+                document.getElementById('result').innerText = `Tu dinero será $${amount.toFixed(2)} después de 10 años.`;
+            }
+    
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+    
+            function drop(event, category) {
+                const data = event.dataTransfer.getData('text');
+                alert(`Moviste "${data}" a la categoría "${category}".`);
+            }
+        </script>
+    </body>
+    </html>

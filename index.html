@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IzIfinanzas - Educación Financiera</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <h1 class="text-2xl font-bold">IzIfinanzas</h1>
+            <span class="px-3">|</span>
+            <p class="text-sm">📞 9211245609</p>
+            <p class="text-sm">✉️ IzIfinanzas@gmail.com</p>
+        </div>
+        <div class="space-x-4 flex items-center">
+            <button class="text-white bg-transparent border-none" onclick="window.location.href='cursos2.html'">📚 Cursos</button>
+            <button class="text-white bg-transparent border-none" >📖 Mis Cursos</button>
+            <button class="text-white bg-transparent border-none" onclick="window.location.href='Contact.html'">✉️ Contacto</button>
+            <a href="mi_perfil.html" class="text-white text-lg">👤</a>
+        </div>
+    </nav>
+
+    <!-- Carousel Start -->
+    <div class="relative w-full overflow-hidden">
+        <div class="flex transition-transform duration-1000 ease-in-out" id="carousel">
+            <div class="w-full flex-shrink-0 relative">
+                <img src="img/finanzas.jpg" class="w-full h-96 object-cover" alt="Educación & Finanzas">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center">
+                    <h4 class="text-white text-lg uppercase mb-3">Educación & Finanzas</h4>
+                    <h1 class="text-4xl text-white font-bold mb-4">GESTIONA TU DINERO AHORA</h1>
+                </div>
+            </div>
+            <div class="w-full flex-shrink-0 relative">
+                <img src="img/finanzas2.jpg" class="w-full h-96 object-cover" alt="Deudas?">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center">
+                    <h4 class="text-white text-lg uppercase mb-3">¿Deudas?</h4>
+                    <h1 class="text-4xl text-white font-bold mb-4">Toma ya Nuestro Curso</h1>
+                </div>
+            </div>
+        </div>
+        <button id="prev" class="absolute left-5 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 p-2 rounded-full text-white">⬅️</button>
+        <button id="next" class="absolute right-5 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 p-2 rounded-full text-white">➡️</button>
+    </div>
+    <!-- Carousel End -->
+
+<!-- About Start -->
+<div class="container mx-auto py-10 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="relative h-[500px]">
+            <img class="w-full h-full object-cover rounded-lg shadow-lg" src="img/consejos-financieros.jpg" alt="Consejos Financieros">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h6 class="text-blue-600 uppercase tracking-widest mb-2">Educación Financiera</h6>
+            <h1 class="text-3xl font-bold mb-4">Te Enseñamos a Administrar tu Dinero Eficazmente</h1>
+            <p class="text-gray-700 mb-4">Aprender sobre finanzas personales es clave para alcanzar tus metas económicas...</p>
+            <ul class="list-disc pl-5 text-gray-700 mb-4">
+                <li><strong>Talleres interactivos</strong> sobre finanzas personales.</li>
+                <li><strong>Cursos en línea</strong> desde la creación de presupuestos hasta la planificación de la jubilación.</li>
+                <li><strong>Asesoría personalizada</strong> para alcanzar tus objetivos financieros.</li>
+            </ul>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <img class="w-full rounded-lg shadow-lg" src="img/controlfi.png" alt="Control Financiero">
+                <img class="w-full rounded-lg shadow-lg" src="img/financiero.jpg" alt="Educación Financiera">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Feature Start -->
+<div class="container mx-auto py-16 px-6">
+    <div class="text-center mb-16">
+        <h6 class="text-blue-600 uppercase tracking-widest text-lg font-semibold">Características Clave</h6>
+        <h1 class="text-4xl font-bold text-gray-900">Nuestras Principales Ventajas</h1>
+    </div>
+    <div class="flex flex-wrap justify-center gap-12">
+        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            <div class="bg-blue-600 text-white p-5 rounded-full mb-6">
+                <i class="fa-solid fa-piggy-bank text-3xl"></i>
+            </div>
+            <h5 class="text-xl font-semibold text-gray-900 text-center">Gestión de Ahorro</h5>
+            <p class="text-gray-700 text-center mt-4">Aprende a manejar tus ahorros y aumentar tu capital de manera efectiva...</p>
+        </div>
+        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            <div class="bg-blue-600 text-white p-5 rounded-full mb-6">
+                <i class="fa-solid fa-chart-line text-3xl"></i>
+            </div>
+            <h5 class="text-xl font-semibold text-gray-900 text-center">Inversión Inteligente</h5>
+            <p class="text-gray-700 text-center mt-4">Conoce las mejores estrategias de inversión para maximizar tus ingresos...</p>
+        </div>
+        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            <div class="bg-blue-600 text-white p-5 rounded-full mb-6">
+                <i class="fa-solid fa-credit-card text-3xl"></i>
+            </div>
+            <h5 class="text-xl font-semibold text-gray-900 text-center">Manejo de Créditos</h5>
+            <p class="text-gray-700 text-center mt-4">Te ayudamos a entender cómo administrar tus deudas de manera efectiva...</p>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+
+
+<!-- Service Start -->
+<div class="container mx-auto py-16 px-6 bg-gray-50 rounded-xl shadow-lg mt-20">
+    <div class="text-center mb-16">
+        <h6 class="text-blue-600 uppercase tracking-widest text-lg font-semibold">Nuestros Servicios</h6>
+        <h1 class="text-4xl font-bold text-gray-900">Servicios Financieros a Tu Medida</h1>
+    </div>
+    <div class="flex flex-wrap justify-center gap-12">
+        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            <i class="fa fa-calculator text-4xl text-blue-600 mb-6"></i>
+            <h5 class="text-xl font-semibold text-gray-900 text-center">Consultoría Financiera</h5>
+            <p class="text-gray-700 text-center mt-4">Asesoramiento profesional para optimizar tus finanzas personales...</p>
+        </div>
+        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            <i class="fa fa-bookmark text-4xl text-blue-600 mb-6"></i>
+            <h5 class="text-xl font-semibold text-gray-900 text-center">Cursos Online</h5>
+            <p class="text-gray-700 text-center mt-4">Cursos accesibles para que aprendas desde cualquier lugar y a tu ritmo...</p>
+        </div>
+        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            <i class="fa fa-credit-card text-4xl text-blue-600 mb-6"></i>
+            <h5 class="text-xl font-semibold text-gray-900 text-center">Plantillas Financieras</h5>
+            <p class="text-gray-700 text-center mt-4">Plantillas prácticas para el control de tus finanzas de forma sencilla...</p>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Benefits Section -->
+<div class="bg-gradient-to-r from-blue-500 to-indigo-700 text-white shadow-xl rounded-xl p-12 max-w-4xl mx-auto mt-20 text-center">
+    <h2 class="text-3xl font-bold mb-8">Beneficios de Aprender con Nosotros</h2>
+
+    <ul class="list-inside list-disc text-lg mb-8 space-y-6">
+        <li class="flex items-center justify-start">
+            <span class="text-2xl mr-4 text-yellow-400">✅</span>
+            Accede a contenido exclusivo y actualizado, creado por expertos.
+        </li>
+        <li class="flex items-center justify-start">
+            <span class="text-2xl mr-4 text-yellow-400">✅</span>
+            Estudia a tu propio ritmo desde la comodidad de tu hogar.
+        </li>
+        <li class="flex items-center justify-start">
+            <span class="text-2xl mr-4 text-yellow-400">✅</span>
+            Obtén certificados que respalden tu conocimiento y crecimiento profesional.
+        </li>
+        <li class="flex items-center justify-start">
+            <span class="text-2xl mr-4 text-yellow-400">✅</span>
+            Aplica estrategias prácticas para mejorar tu situación financiera inmediata.
+        </li>
+    </ul>
+
+    <a href="register.html" class="bg-yellow-400 text-gray-800 py-4 px-8 rounded-full text-2xl font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105">
+        Únete a Nosotros
+    </a>
+</div>
+
+
+
+<!-- Footer Start -->
+<div class="bg-gray-900 text-white py-12 px-6 md:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <!-- Logo and Social Media -->
+        <div>
+            <a href="#" class="text-3xl font-bold text-blue-600">
+                <span class="text-white">iZi</span>FINANZAS
+            </a>
+            <p class="text-white-50 mt-4">Promovemos la educación financiera para empoderarte en tus decisiones económicas y alcanzar tus metas personales.</p>
+            <div class="flex space-x-4 mt-6">
+                <a href="#" class="text-white hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white hover:text-blue-600"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+            <h5 class="text-lg font-semibold text-white uppercase mb-4">Nuestros Servicios</h5>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-white-50 hover:text-white">Asesoría Financiera</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Educación en Inversiones</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Planificación de Ahorros</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Gestión de Deudas</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Cursos y Talleres</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Noticias Financieras</a></li>
+            </ul>
+        </div>
+
+        <!-- Useful Links -->
+        <div>
+            <h5 class="text-lg font-semibold text-white uppercase mb-4">Enlaces Útiles</h5>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-white-50 hover:text-white">Inicio</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Sobre Nosotros</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Servicios</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Testimonios</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Contacto</a></li>
+                <li><a href="#" class="text-white-50 hover:text-white">Blog</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div>
+            <h5 class="text-lg font-semibold text-white uppercase mb-4">Contáctanos</h5>
+            <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>Calle 123, Ciudad Financiera</p>
+            <p class="text-white-50 mb-2"><i class="fas fa-phone-alt mr-2"></i>+123 456 7890</p>
+            <p class="text-white-50 mb-4"><i class="fas fa-envelope mr-2"></i>contacto@finanzaseducacion.com</p>
+            <h6 class="text-white uppercase mb-3">Suscríbete</h6>
+            <div class="flex">
+                <input type="email" class="w-full px-4 py-2 rounded-l-lg border-2 border-gray-300 focus:ring-2 focus:ring-blue-500" placeholder="Tu Email">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition duration-300">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-white-50">
+        <p>&copy; 2025 FinanzasEducacion. Todos los derechos reservados.</p>
+        <p>Diseñado por <a href="#" class="text-blue-600 hover:underline">TuEquipoCreativo</a></p>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll("#carousel > div");
+        function showSlide(i) {
+            index = (i + slides.length) % slides.length;
+            document.getElementById("carousel").style.transform = `translateX(-${index * 100}%)`;
+        }
+        document.getElementById("prev").addEventListener("click", () => showSlide(index - 1));
+        document.getElementById("next").addEventListener("click", () => showSlide(index + 1));
+        setInterval(() => showSlide(index + 1), 5000);
+
+        document.getElementById("cursosBtn").addEventListener("click", function() {
+            window.location.href = "cursos2.html";
+        });
+        document.getElementById("contactoBtn").addEventListener("click", function() {
+            window.location.href = "contact.html";
+        });
+    </script>
+</body>
+</html>

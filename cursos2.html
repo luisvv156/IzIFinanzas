@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tu Curso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body class="flex justify-center items-center h-screen bg-gradient-to-r from-blue-400 to-cyan-400 overflow-y-scroll relative">
+    
+    <div class="container mx-auto px-4">
+        <h1 class="text-white text-3xl md:text-4xl font-bold text-center mb-8">Selecciona tu Curso</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cursos -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="text-center text-cyan-400 text-6xl mb-4"><i class="fas fa-wallet"></i></div>
+                <h3 class="text-xl font-semibold text-gray-800 uppercase mb-2 text-center">Introducción a las Finanzas</h3>
+                <p class="text-gray-600 mb-4 text-center">Aprende a gestionar tus finanzas personales.</p>
+                <div class="relative text-center">
+                    <button class="bg-cyan-400 text-white px-4 py-2 rounded-full hover:bg-blue-400 transition" onclick="toggleMenu('menu-finanzas')">Seleccionar Lección</button>
+                    <div id="menu-finanzas" class="hidden mt-2 bg-white shadow-md rounded-lg absolute left-1/2 transform -translate-x-1/2 w-40">
+                        <button onclick="location.href='leccion1.html'" class="block w-full py-2 hover:bg-gray-200">F personales</button>
+                        <button onclick="location.href='leccion9.html'" class="block w-full py-2 hover:bg-gray-200">Finanzas cont</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="text-center text-cyan-400 text-6xl mb-4"><i class="fas fa-chart-line"></i></div>
+                <h3 class="text-xl font-semibold text-gray-800 uppercase mb-2 text-center">Inversiones 101</h3>
+                <p class="text-gray-600 mb-4 text-center">Haz crecer tu patrimonio con inversiones inteligentes.</p>
+                <div class="relative text-center">
+                    <button class="bg-cyan-400 text-white px-4 py-2 rounded-full hover:bg-blue-400 transition" onclick="toggleMenu('menu-inversiones')">Seleccionar Lección</button>
+                    <div id="menu-inversiones" class="hidden mt-2 bg-white shadow-md rounded-lg absolute left-1/2 transform -translate-x-1/2 w-40">
+                        <button onclick="location.href='leccion6.html'" class="block w-full py-2 hover:bg-gray-200">Seguros</button>
+                        <button onclick="location.href='service.html'" class="block w-full py-2 hover:bg-gray-200">Inversiones</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="text-center text-cyan-400 text-6xl mb-4"><i class="fas fa-hand-holding-usd"></i></div>
+                <h3 class="text-xl font-semibold text-gray-800 uppercase mb-2 text-center">Gestión de Deudas</h3>
+                <p class="text-gray-600 mb-4 text-center">Estrategias para eliminar deudas.</p>
+                <div class="relative text-center">
+                    <button class="bg-cyan-400 text-white px-4 py-2 rounded-full hover:bg-blue-400 transition" onclick="toggleMenu('menu-deudas')">Seleccionar Lección</button>
+                    <div id="menu-deudas" class="hidden mt-2 bg-white shadow-md rounded-lg absolute left-1/2 transform -translate-x-1/2 w-40">
+                        <button onclick="location.href='leccion5.html'" class="block w-full py-2 hover:bg-gray-200">Planificación Financiera</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="text-center text-cyan-400 text-6xl mb-4"><i class="fas fa-coins"></i></div>
+                <h3 class="text-xl font-semibold text-gray-800 uppercase mb-2 text-center">Estrategias de Ahorro</h3>
+                <p class="text-gray-600 mb-4 text-center">Descubre cómo ahorrar de manera efectiva.</p>
+                <div class="relative text-center">
+                    <button class="bg-cyan-400 text-white px-4 py-2 rounded-full hover:bg-blue-400 transition" onclick="toggleMenu('menu-ahorro')">Seleccionar Lección</button>
+                    <div id="menu-ahorro" class="hidden mt-2 bg-white shadow-md rounded-lg absolute left-1/2 transform -translate-x-1/2 w-40">
+                        <button onclick="location.href='leccion4.html'" class="block w-full py-2 hover:bg-gray-200">Ahorro & Inversión</button>
+                        <button onclick="location.href='leccion8.html'" class="block w-full py-2 hover:bg-gray-200">Jubilación</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="text-center text-cyan-400 text-6xl mb-4"><i class="fas fa-university"></i></div>
+                <h3 class="text-xl font-semibold text-gray-800 uppercase mb-2 text-center">Fundamentos Bancarios</h3>
+                <p class="text-gray-600 mb-4 text-center">Conoce los servicios bancarios disponibles.</p>
+                <div class="relative text-center">
+                    <button class="bg-cyan-400 text-white px-4 py-2 rounded-full hover:bg-blue-400 transition" onclick="toggleMenu('menu-bancarios')">Seleccionar Lección</button>
+                    <div id="menu-bancarios" class="hidden mt-2 bg-white shadow-md rounded-lg absolute left-1/2 transform -translate-x-1/2 w-40">
+                        <button onclick="location.href='leccion3.html'" class="block w-full py-2 hover:bg-gray-200">Administración de Tarjetas</button>
+                        <button onclick="location.href='leccion7.html'" class="block w-full py-2 hover:bg-gray-200">Obligaciones Fiscales</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="text-center text-cyan-400 text-6xl mb-4"><i class="fas fa-building"></i></div>
+                <h3 class="text-xl font-semibold text-gray-800 uppercase mb-2 text-center">Planificación Financiera</h3>
+                <p class="text-gray-600 mb-4 text-center">Desarrolla un plan financiero sólido para alcanzar tus metas a largo plazo.</p>
+                <div class="relative text-center">
+                    <button class="bg-cyan-400 text-white px-4 py-2 rounded-full hover:bg-blue-400 transition" onclick="toggleMenu('menu-planificacion')">Seleccionar Lección</button>
+                    <div id="menu-planificacion" class="hidden mt-2 bg-white shadow-md rounded-lg absolute left-1/2 transform -translate-x-1/2 w-40">
+                        <button onclick="location.href='leccion2.html'" class="block w-full py-2 hover:bg-gray-200">Administración de Tarjetas</button>
+                        <button onclick="location.href='about.html'" class="block w-full py-2 hover:bg-gray-200">Obligaciones Fiscales</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="fixed bottom-5 right-5 bg-cyan-400 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-400 transition" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Ir Arriba</button>
+
+    <script>
+        function toggleMenu(menuId) {
+            const menu = document.getElementById(menuId);
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

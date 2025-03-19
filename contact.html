@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TRAVELER - Free Travel Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Header Start -->
+    <div class="bg-blue-600 text-white text-center py-20">
+        <h3 class="text-4xl font-semibold uppercase">Contacto</h3>
+    </div>
+    <!-- Header End -->
+
+    <!-- Contact Start -->
+    <div class="container mx-auto px-5 py-16">
+        <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <form id="contactForm" action="/send_email" method="POST">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="control-group">
+                        <input type="text" class="form-control p-4 w-full border rounded-md focus:ring-2 focus:ring-blue-600" name="name" placeholder="Tu Nombre" required="required" />
+                    </div>
+                    <div class="control-group">
+                        <input type="email" class="form-control p-4 w-full border rounded-md focus:ring-2 focus:ring-blue-600" name="email" placeholder="Tu Email" required="required" />
+                    </div>
+                </div>
+                <div class="control-group mt-4">
+                    <input type="text" class="form-control p-4 w-full border rounded-md focus:ring-2 focus:ring-blue-600" name="subject" placeholder="Motivo" required="required" />
+                </div>
+                <div class="control-group mt-4">
+                    <textarea class="form-control py-3 px-4 w-full border rounded-md focus:ring-2 focus:ring-blue-600" rows="5" name="message" placeholder="Mensaje" required="required"></textarea>
+                </div>
+                <div class="text-center mt-6">
+                    <button class="btn bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition-all duration-300" type="submit" id="sendMessageButton">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="bg-gray-800 text-white py-8">
+        <div class="container text-center">
+            <h1 class="text-3xl font-bold text-blue-500">iZi<span class="text-white">FINANZAS</span></h1>
+            <p class="mt-2 text-gray-400">Promovemos la educación financiera para empoderarte.</p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+</body>
+
+</html>

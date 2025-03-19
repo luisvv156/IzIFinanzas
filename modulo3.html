@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Gratuito sobre Inversiones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section */
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1a73e8, #28a745);
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            font-size: 36px;
+        }
+
+        h2 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 50px 30px;
+            margin-top: -50px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        .module {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .module:hover {
+            transform: translateY(-5px);
+        }
+
+        .module ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .module ul li {
+            position: relative;
+            padding-left: 30px;
+            font-weight: 500;
+        }
+
+        .module ul li:before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: #1a73e8;
+            font-size: 30px;
+            top: 0;
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+            padding: 12px 30px;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #218838;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+        }
+
+        .summary {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .summary:hover {
+            transform: translateY(-5px);
+        }
+
+        .summary p {
+            font-size: 18px;
+        }
+
+        .summary h3 {
+            color: #28a745;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, #1a73e8, #28a745);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        /* Additional Style for Interactive Elements */
+        .interactive-quiz {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            background-color: #f1f8e9;
+        }
+
+        .interactive-quiz input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .interactive-quiz button {
+            margin-top: 15px;
+        }
+
+        /* Progress Bar Styles */
+        .progress-bar {
+            background-color: #28a745;
+            height: 30px;
+            width: 0%;
+            transition: width 0.5s ease;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Button Styles */
+        .activity-btn {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+            padding: 12px 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .activity-btn:hover {
+            background-color: #138496;
+            border-color: #138496;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+                padding: 40px 20px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .module ul li {
+                font-size: 16px;
+            }
+            .btn-primary {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Curso Gratuito sobre Inversiones</h1>
+    <div class="container">
+<!-- Tema 1: Cómo seleccionar un corredor de bolsa -->
+<div class="module">
+    <h3>¿Cómo seleccionar un corredor de bolsa (broker)?</h3>
+    <p>Seleccionar un corredor de bolsa adecuado es uno de los primeros pasos en tu viaje de inversión. El broker que elijas puede influir en las comisiones, la calidad de las herramientas de trading, la seguridad de tu dinero y la accesibilidad al mercado. Vamos a desglosar los factores más importantes que debes considerar:</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4><strong>1. Comisiones y Tarifas</strong></h4>
+            <p>Los brokers cobran comisiones por cada transacción que realizas, ya sea comprando o vendiendo activos. Algunos ofrecen tarifas muy bajas, mientras que otros pueden tener comisiones ocultas. Es importante elegir un broker que se ajuste a tu presupuesto, dependiendo de la frecuencia con la que realices operaciones.</p>
+            <ul>
+                <li><strong>Comisiones por operación:</strong> Asegúrate de que el costo de cada transacción no sea elevado.</li>
+                <li><strong>Tarifas de mantenimiento:</strong> Algunos brokers pueden cobrarte tarifas mensuales o anuales por mantener tu cuenta.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4><strong>2. Herramientas y Plataforma</strong></h4>
+            <p>Una buena plataforma de trading es esencial para ejecutar operaciones con eficacia. Busca brokers que ofrezcan herramientas avanzadas para análisis técnico, gráficos interactivos, y acceso a informes detallados sobre los mercados.</p>
+            <ul>
+                <li><strong>Facilidad de uso:</strong> La plataforma debe ser intuitiva, tanto en la versión web como móvil.</li>
+                <li><strong>Acceso a herramientas:</strong> Asegúrate de que puedas utilizar indicadores técnicos, análisis de mercado, y otras herramientas clave para tomar decisiones informadas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4><strong>3. Seguridad</strong></h4>
+            <p>La seguridad es una prioridad. Asegúrate de que el broker esté regulado por una entidad financiera confiable, y que ofrezca medidas de protección como la autenticación en dos pasos (2FA) y el seguro de fondos.</p>
+            <ul>
+                <li><strong>Regulación:</strong> Verifica si el broker está regulado por organismos como la <strong>CNMV</strong> (Comisión Nacional del Mercado de Valores) en España, o la <strong>SEC</strong> (Securities and Exchange Commission) en EE.UU.</li>
+                <li><strong>Protección de fondos:</strong> Investiga si el broker tiene un seguro de fondos en caso de quiebra.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4><strong>4. Tipos de Inversiones Disponibles</strong></h4>
+            <p>Algunos brokers permiten operar con acciones, bonos y fondos mutuos, mientras que otros también ofrecen criptomonedas, futuros y opciones. Asegúrate de que el broker ofrezca los instrumentos que deseas negociar.</p>
+            <ul>
+                <li><strong>Acciones y ETF:</strong> Los brokers deben ofrecer acceso a mercados de acciones y fondos cotizados (ETFs).</li>
+                <li><strong>Criptomonedas:</strong> Si deseas invertir en criptos, selecciona un broker que ofrezca esta opción.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h4><strong>5. Atención al Cliente</strong></h4>
+    <p>Es importante que el broker ofrezca un buen servicio al cliente, que esté disponible en múltiples canales (chat en vivo, teléfono, email) y que responda de manera eficiente a tus inquietudes.</p>
+
+    <h5><strong>Recomendaciones:</strong></h5>
+    <p>A continuación, te dejamos una tabla comparativa de algunos brokers populares. ¡Elige el que mejor se adapte a tus necesidades!</p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Broker</th>
+                <th>Comisiones</th>
+                <th>Plataforma</th>
+                <th>Seguridad</th>
+                <th>Instrumentos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>eToro</td>
+                <td>Bajas comisiones</td>
+                <td>Fácil de usar</td>
+                <td>Regulado</td>
+                <td>Acciones, Criptos, ETF</td>
+            </tr>
+            <tr>
+                <td>TD Ameritrade</td>
+                <td>Comisiones por operación</td>
+                <td>Poderosa plataforma</td>
+                <td>Alta seguridad</td>
+                <td>Acciones, Opciones, ETFs</td>
+            </tr>
+            <tr>
+                <td>Robinhood</td>
+                <td>Sin comisiones</td>
+                <td>Simplificada</td>
+                <td>Regulado</td>
+                <td>Acciones, ETFs</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Actividad Interactiva -->
+    <h4><strong>Prueba de conocimiento:</strong></h4>
+    <p>Ahora que conoces los aspectos clave para elegir un broker, ¿te gustaría ponerlo en práctica? Responde a la siguiente pregunta:</p>
+    <div class="interactive-quiz">
+        <p>¿Cuál de estos brokers es conocido por no cobrar comisiones por las operaciones de acciones?</p>
+        <input type="radio" name="quiz-broker" id="broker1" /> <label for="broker1">eToro</label><br>
+        <input type="radio" name="quiz-broker" id="broker2" /> <label for="broker2">TD Ameritrade</label><br>
+        <input type="radio" name="quiz-broker" id="broker3" /> <label for="broker3">Robinhood</label><br>
+        <button class="btn-primary" onclick="submitBrokerQuiz()">Enviar Respuesta</button>
+    </div>
+</div>
+
+<script>
+    function submitBrokerQuiz() {
+        let selected = document.querySelector('input[name="quiz-broker"]:checked');
+        if (selected) {
+            if (selected.id === "broker3") {
+                alert("¡Correcto! Robinhood es conocido por no cobrar comisiones en operaciones de acciones.");
+            } else {
+                alert("Incorrecto. La respuesta correcta es Robinhood.");
+            }
+        } else {
+            alert("Por favor, selecciona una respuesta.");
+        }
+    }
+</script>
+
+<!-- Tema 2: Plataformas de inversión populares -->
+<div class="module">
+    <h3>Plataformas de inversión populares</h3>
+    <p>Las plataformas de inversión son esenciales para llevar a cabo tus operaciones en los mercados financieros. Dependiendo de tus objetivos, experiencia y necesidades, algunas plataformas pueden ser más adecuadas que otras. A continuación, te presentamos algunas de las plataformas más populares que puedes considerar para invertir:</p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h4><strong>1. Robinhood</strong></h4>
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Robinhood_logo.svg" alt="Robinhood" style="width: 80px; height: auto;" /><br><em>Ideal para principiantes</em></p>
+            <p>Robinhood ha ganado popularidad por su interfaz simple y sus cero comisiones en operaciones de acciones y ETFs. Es una excelente opción para los nuevos inversionistas que desean comenzar con una plataforma sencilla.</p>
+            <ul>
+                <li><strong>Comisiones:</strong> Cero comisiones por operaciones.</li>
+                <li><strong>Herramientas:</strong> Básicas, ideales para novatos.</li>
+                <li><strong>Instrumentos:</strong> Acciones, ETFs, criptomonedas.</li>
+                <li><strong>Regulación:</strong> Está regulado por la FINRA en EE.UU.</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h4><strong>2. eToro</strong></h4>
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Etoro_logo.svg" alt="eToro" style="width: 80px; height: auto;" /><br><em>Inversiones sociales y CopyTrading</em></p>
+            <p>eToro es conocido por su función de CopyTrading, que te permite copiar las operaciones de traders experimentados en tiempo real. Es ideal para quienes desean aprender de expertos mientras invierten.</p>
+            <ul>
+                <li><strong>Comisiones:</strong> Comisiones bajas por transacción.</li>
+                <li><strong>Herramientas:</strong> Buenas para traders intermedios y principiantes.</li>
+                <li><strong>Instrumentos:</strong> Acciones, criptomonedas, ETFs, commodities.</li>
+                <li><strong>Regulación:</strong> Regulado por entidades en Europa y EE.UU.</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h4><strong>3. TD Ameritrade</strong></h4>
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Td_ameritrade_logo.svg" alt="TD Ameritrade" style="width: 80px; height: auto;" /><br><em>Plataforma avanzada para traders serios</em></p>
+            <p>TD Ameritrade es ideal para inversores experimentados que buscan herramientas de análisis avanzado y una plataforma robusta. Ofrece acceso a numerosos mercados y opciones avanzadas de trading.</p>
+            <ul>
+                <li><strong>Comisiones:</strong> Sin comisiones para operaciones de acciones.</li>
+                <li><strong>Herramientas:</strong> Avanzadas, incluyendo ThinkOrSwim.</li>
+                <li><strong>Instrumentos:</strong> Acciones, opciones, futuros, bonos, ETFs.</li>
+                <li><strong>Regulación:</strong> Regulado por la SEC y FINRA.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h4><strong>Comparativa de plataformas:</strong></h4>
+    <p>Para que puedas tomar una decisión informada, aquí tienes una tabla comparativa de las plataformas que mencionamos:</p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Plataforma</th>
+                <th>Comisiones</th>
+                <th>Características</th>
+                <th>Regulación</th>
+                <th>Instrumentos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Robinhood</td>
+                <td>Cero comisiones</td>
+                <td>Interfaz sencilla, ideal para novatos</td>
+                <td>Regulado en EE.UU.</td>
+                <td>Acciones, ETFs, Criptomonedas</td>
+            </tr>
+            <tr>
+                <td>eToro</td>
+                <td>Bajas comisiones</td>
+                <td>CopyTrading, Inversión social</td>
+                <td>Regulado en Europa y EE.UU.</td>
+                <td>Acciones, Criptomonedas, ETFs</td>
+            </tr>
+            <tr>
+                <td>TD Ameritrade</td>
+                <td>Sin comisiones en acciones</td>
+                <td>Herramientas avanzadas para traders serios</td>
+                <td>Regulado por SEC y FINRA</td>
+                <td>Acciones, Opciones, Futuros, Bonos, ETFs</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4><strong>Prueba de conocimiento:</strong></h4>
+    <p>Ahora que sabes más sobre las plataformas de inversión, ¿puedes poner a prueba lo aprendido? Responde a la siguiente pregunta:</p>
+    <div class="interactive-quiz">
+        <p>¿Cuál de las siguientes plataformas es conocida por ofrecer la función de CopyTrading?</p>
+        <input type="radio" name="quiz-platform" id="platform1" /> <label for="platform1">Robinhood</label><br>
+        <input type="radio" name="quiz-platform" id="platform2" /> <label for="platform2">eToro</label><br>
+        <input type="radio" name="quiz-platform" id="platform3" /> <label for="platform3">TD Ameritrade</label><br>
+        <button class="btn-primary" onclick="submitPlatformQuiz()">Enviar Respuesta</button>
+    </div>
+</div>
+
+<script>
+    function submitPlatformQuiz() {
+        let selected = document.querySelector('input[name="quiz-platform"]:checked');
+        if (selected) {
+            if (selected.id === "platform2") {
+                alert("¡Correcto! eToro es conocido por ofrecer CopyTrading.");
+            } else {
+                alert("Incorrecto. La respuesta correcta es eToro.");
+            }
+        } else {
+            alert("Por favor, selecciona una respuesta.");
+        }
+    }
+</script>
+
+<!-- Simulador de Inversión -->
+<div class="module">
+    <h3>Simulador de Inversión</h3>
+    <p>El simulador de inversión es una excelente herramienta para practicar tus habilidades sin arriesgar dinero real. A través de este simulador, podrás experimentar cómo tus decisiones impactan el valor de tu portafolio y aprender sobre diferentes estrategias de inversión.</p>
+    <p>¡Vamos a comenzar! Elige una de las siguientes acciones y empieza a invertir con $10,000 virtuales. El valor de tus inversiones cambiará en tiempo real con base en los precios actuales del mercado.</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4><strong>1. Elige tu acción:</strong></h4>
+            <select id="action-select" class="form-select">
+                <option value="AAPL">Apple (AAPL) - $150</option>
+                <option value="TSLA">Tesla (TSLA) - $650</option>
+                <option value="AMZN">Amazon (AMZN) - $3,300</option>
+                <option value="GOOGL">Google (GOOGL) - $2,700</option>
+                <option value="MSFT">Microsoft (MSFT) - $300</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <h4><strong>2. Introduce la cantidad a invertir:</strong></h4>
+            <input type="number" id="investment-amount" class="form-control" placeholder="Cantidad en dólares" min="1" value="100">
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn-primary" onclick="simulateInvestment()">Simular Inversión</button>
+    </div>
+
+    <div id="simulation-result" class="mt-5">
+        <h4>Resultado de la simulación</h4>
+        <p id="simulation-summary">Selecciona una acción y una cantidad para comenzar la simulación.</p>
+    </div>
+    
+    <h4>Consejos para mejorar tu estrategia:</h4>
+    <ul>
+        <li><strong>Diversificación:</strong> No pongas todos tus fondos en una sola acción. Asegúrate de diversificar para reducir el riesgo.</li>
+        <li><strong>Investiga el mercado:</strong> Antes de invertir, asegúrate de investigar la empresa y el sector.</li>
+        <li><strong>Inversión a largo plazo:</strong> Ten paciencia y no te dejes llevar por las fluctuaciones diarias del mercado.</li>
+    </ul>
+
+</div>
+
+<script>
+    // Simulador de inversión
+    const stockPrices = {
+        AAPL: 150,
+        TSLA: 650,
+        AMZN: 3300,
+        GOOGL: 2700,
+        MSFT: 300
+    };
+
+    function simulateInvestment() {
+        const selectedStock = document.getElementById("action-select").value;
+        const investmentAmount = parseFloat(document.getElementById("investment-amount").value);
+        const stockPrice = stockPrices[selectedStock];
+        const stockSymbol = document.getElementById("action-select").options[document.getElementById("action-select").selectedIndex].text;
+
+        if (investmentAmount <= 0) {
+            alert("Por favor, ingresa una cantidad válida para invertir.");
+            return;
+        }
+
+        // Calcula la cantidad de acciones que se pueden comprar
+        const numShares = Math.floor(investmentAmount / stockPrice);
+        const totalInvestment = numShares * stockPrice;
+        const remainingBalance = investmentAmount - totalInvestment;
+
+        // Muestra los resultados
+        const simulationResult = `
+            <p><strong>Inversión en:</strong> ${stockSymbol}</p>
+            <p><strong>Cantidad invertida:</strong> $${investmentAmount.toFixed(2)}</p>
+            <p><strong>Precio actual por acción:</strong> $${stockPrice.toFixed(2)}</p>
+            <p><strong>Acciones compradas:</strong> ${numShares}</p>
+            <p><strong>Total invertido:</strong> $${totalInvestment.toFixed(2)}</p>
+            <p><strong>Saldo restante:</strong> $${remainingBalance.toFixed(2)}</p>
+            <p><strong>Valor actual de la inversión:</strong> $${(numShares * stockPrice).toFixed(2)}</p>
+        `;
+
+        document.getElementById("simulation-summary").innerHTML = simulationResult;
+    }
+</script>
+
+<!-- Quiz de Conocimiento -->
+<div class="module">
+    <h3>Quiz de Conocimiento sobre Inversiones</h3>
+    <p>¡Ponte a prueba! Responde a las siguientes preguntas sobre inversión y finanzas para ver cuánto sabes. Al final, recibirás un puntaje para saber en qué áreas puedes mejorar.</p>
+    
+    <form id="quiz-form">
+        <!-- Pregunta 1 -->
+        <div class="question">
+            <h4>1. ¿Qué es un corredor de bolsa?</h4>
+            <label>
+                <input type="radio" name="question1" value="incorrect"> Una persona que compra y vende activos en nombre de otros.
+            </label><br>
+            <label>
+                <input type="radio" name="question1" value="correct"> Una plataforma que facilita las inversiones y el acceso a mercados.
+            </label><br>
+            <label>
+                <input type="radio" name="question1" value="incorrect"> Un tipo de activo financiero.
+            </label><br>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+            <h4>2. ¿Cuál de las siguientes plataformas no cobra comisiones por transacción?</h4>
+            <label>
+                <input type="radio" name="question2" value="incorrect"> eToro
+            </label><br>
+            <label>
+                <input type="radio" name="question2" value="correct"> Robinhood
+            </label><br>
+            <label>
+                <input type="radio" name="question2" value="incorrect"> TD Ameritrade
+            </label><br>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+            <h4>3. ¿Qué es la diversificación en el contexto de las inversiones?</h4>
+            <label>
+                <input type="radio" name="question3" value="incorrect"> Invertir solo en acciones de una sola empresa.
+            </label><br>
+            <label>
+                <input type="radio" name="question3" value="correct"> Invertir en diferentes tipos de activos para reducir el riesgo.
+            </label><br>
+            <label>
+                <input type="radio" name="question3" value="incorrect"> Invertir solo en bonos del gobierno.
+            </label><br>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+            <h4>4. ¿Qué es un análisis técnico?</h4>
+            <label>
+                <input type="radio" name="question4" value="correct"> El estudio de los precios y volúmenes de mercado a través de gráficos.
+            </label><br>
+            <label>
+                <input type="radio" name="question4" value="incorrect"> El análisis de los estados financieros de una empresa.
+            </label><br>
+            <label>
+                <input type="radio" name="question4" value="incorrect"> La evaluación del potencial de crecimiento de un sector.
+            </label><br>
+        </div>
+
+        <!-- Botón para revisar -->
+        <div class="text-center mt-4">
+            <button type="button" class="btn-primary" onclick="checkQuizAnswers()">Revisar Respuestas</button>
+        </div>
+
+    </form>
+
+    <!-- Resultado -->
+    <div id="quiz-result" class="mt-4">
+        <h4>Resultado</h4>
+        <p id="score-summary">¡Responde todas las preguntas para ver tu puntaje!</p>
+    </div>
+
+    <h4>Consejos:</h4>
+    <ul>
+        <li><strong>Lee bien cada pregunta:</strong> Asegúrate de comprender cada opción antes de responder.</li>
+        <li><strong>No te apresures:</strong> Reflexiona sobre lo que has aprendido antes de elegir una respuesta.</li>
+        <li><strong>Investiga más:</strong> Si alguna respuesta te resultó confusa, investiga más para afianzar tus conocimientos.</li>
+    </ul>
+</div>
+
+<script>
+    // Función para verificar las respuestas
+    function checkQuizAnswers() {
+        let score = 0;
+        const totalQuestions = 4;
+
+        // Respuestas correctas
+        const correctAnswers = {
+            question1: "correct",
+            question2: "correct",
+            question3: "correct",
+            question4: "correct"
+        };
+
+        // Revisión de las respuestas
+        const questions = document.querySelectorAll('.question');
+        questions.forEach((question, index) => {
+            const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+            const questionName = `question${index + 1}`;
+            if (selectedAnswer && selectedAnswer.value === correctAnswers[questionName]) {
+                score++;
+            }
+        });
+
+        // Mostrar resultado
+        const resultMessage = `Obtuviste ${score} de ${totalQuestions} respuestas correctas.`;
+        let feedbackMessage = '';
+        
+        if (score === totalQuestions) {
+            feedbackMessage = '¡Excelente! Estás listo para comenzar a invertir.';
+        } else if (score >= totalQuestions * 0.5) {
+            feedbackMessage = '¡Buen trabajo! Sigue practicando para mejorar tu conocimiento.';
+        } else {
+            feedbackMessage = '¡No te preocupes! Sigue aprendiendo y mejorando tus conocimientos en inversiones.';
+        }
+
+        document.getElementById('score-summary').innerHTML = resultMessage;
+        document.getElementById('quiz-result').innerHTML += `<p>${feedbackMessage}</p>`;
+    }
+</script>
+</body>
+</html>
