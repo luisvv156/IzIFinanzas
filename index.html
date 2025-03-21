@@ -68,30 +68,29 @@
         </div>
     </div>
 </div>
-<!-- About End -->
 
-<!-- Feature Start -->
+    <!-- Feature Start -->
 <div class="container mx-auto py-16 px-6">
     <div class="text-center mb-16">
         <h6 class="text-blue-600 uppercase tracking-widest text-lg font-semibold">Características Clave</h6>
         <h1 class="text-4xl font-bold text-gray-900">Nuestras Principales Ventajas</h1>
     </div>
-    <div class="flex flex-wrap justify-center gap-12">
-        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="bg-white w-full max-w-xs mx-auto rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
             <div class="bg-blue-600 text-white p-5 rounded-full mb-6">
                 <i class="fa-solid fa-piggy-bank text-3xl"></i>
             </div>
             <h5 class="text-xl font-semibold text-gray-900 text-center">Gestión de Ahorro</h5>
             <p class="text-gray-700 text-center mt-4">Aprende a manejar tus ahorros y aumentar tu capital de manera efectiva...</p>
         </div>
-        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+        <div class="bg-white w-full max-w-xs mx-auto rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
             <div class="bg-blue-600 text-white p-5 rounded-full mb-6">
                 <i class="fa-solid fa-chart-line text-3xl"></i>
             </div>
             <h5 class="text-xl font-semibold text-gray-900 text-center">Inversión Inteligente</h5>
             <p class="text-gray-700 text-center mt-4">Conoce las mejores estrategias de inversión para maximizar tus ingresos...</p>
         </div>
-        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+        <div class="bg-white w-full max-w-xs mx-auto rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
             <div class="bg-blue-600 text-white p-5 rounded-full mb-6">
                 <i class="fa-solid fa-credit-card text-3xl"></i>
             </div>
@@ -102,25 +101,24 @@
 </div>
 <!-- Feature End -->
 
-
 <!-- Service Start -->
 <div class="container mx-auto py-16 px-6 bg-gray-50 rounded-xl shadow-lg mt-20">
     <div class="text-center mb-16">
         <h6 class="text-blue-600 uppercase tracking-widest text-lg font-semibold">Nuestros Servicios</h6>
         <h1 class="text-4xl font-bold text-gray-900">Servicios Financieros a Tu Medida</h1>
     </div>
-    <div class="flex flex-wrap justify-center gap-12">
-        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="bg-white w-full max-w-xs mx-auto rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
             <i class="fa fa-calculator text-4xl text-blue-600 mb-6"></i>
             <h5 class="text-xl font-semibold text-gray-900 text-center">Consultoría Financiera</h5>
             <p class="text-gray-700 text-center mt-4">Asesoramiento profesional para optimizar tus finanzas personales...</p>
         </div>
-        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+        <div class="bg-white w-full max-w-xs mx-auto rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
             <i class="fa fa-bookmark text-4xl text-blue-600 mb-6"></i>
             <h5 class="text-xl font-semibold text-gray-900 text-center">Cursos Online</h5>
             <p class="text-gray-700 text-center mt-4">Cursos accesibles para que aprendas desde cualquier lugar y a tu ritmo...</p>
         </div>
-        <div class="bg-white w-80 h-72 rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+        <div class="bg-white w-full max-w-xs mx-auto rounded-2xl shadow-xl p-8 flex flex-col items-center justify-between transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
             <i class="fa fa-credit-card text-4xl text-blue-600 mb-6"></i>
             <h5 class="text-xl font-semibold text-gray-900 text-center">Plantillas Financieras</h5>
             <p class="text-gray-700 text-center mt-4">Plantillas prácticas para el control de tus finanzas de forma sencilla...</p>
@@ -128,8 +126,7 @@
     </div>
 </div>
 <!-- Service End -->
-
-
+ 
 <!-- Benefits Section -->
 <div class="bg-gradient-to-r from-blue-500 to-indigo-700 text-white shadow-xl rounded-xl p-12 max-w-4xl mx-auto mt-20 text-center">
     <h2 class="text-3xl font-bold mb-8">Beneficios de Aprender con Nosotros</h2>
@@ -224,24 +221,23 @@
 </div>
 <!-- Footer End -->
 
+<script>
+    let index = 0;
+    const slides = document.querySelectorAll("#carousel > div");
+    function showSlide(i) {
+        index = (i + slides.length) % slides.length;
+        document.getElementById("carousel").style.transform = `translateX(-${index * 100}%)`;
+    }
+    document.getElementById("prev").addEventListener("click", () => showSlide(index - 1));
+    document.getElementById("next").addEventListener("click", () => showSlide(index + 1));
+    setInterval(() => showSlide(index + 1), 5000);
 
-    <script>
-        let index = 0;
-        const slides = document.querySelectorAll("#carousel > div");
-        function showSlide(i) {
-            index = (i + slides.length) % slides.length;
-            document.getElementById("carousel").style.transform = `translateX(-${index * 100}%)`;
-        }
-        document.getElementById("prev").addEventListener("click", () => showSlide(index - 1));
-        document.getElementById("next").addEventListener("click", () => showSlide(index + 1));
-        setInterval(() => showSlide(index + 1), 5000);
-
-        document.getElementById("cursosBtn").addEventListener("click", function() {
-            window.location.href = "cursos2.html";
-        });
-        document.getElementById("contactoBtn").addEventListener("click", function() {
-            window.location.href = "contact.html";
-        });
-    </script>
+    document.getElementById("cursosBtn").addEventListener("click", function() {
+        window.location.href = "cursos2.html";
+    });
+    document.getElementById("contactoBtn").addEventListener("click", function() {
+        window.location.href = "contact.html";
+    });
+</script>
 </body>
 </html>
